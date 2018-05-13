@@ -13,58 +13,43 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Content<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Flot Charts</a>
+                        <a href="#">Create Form Input</a>
                     </li>
                     <li>
-                        <a href="#">Morris.js Charts</a>
+                        <a href="#">Create Form Output</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
-            </li>
-            <li>
-                <a href="forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-wrench fa-fw"></i> Admin<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="listUser.php">Panels and Wells</a>
+                        <a href="listUser.php">List User</a>
                     </li>
                     <li>
-                        <a href="#">Buttons</a>
+                        <a href="#">User Setting</a>
                     </li>
                     <li>
-                        <a href="#">Notifications</a>
-                    </li>
-                    <li>
-                        <a href="#">Typography</a>
-                    </li>
-                    <li>
-                        <a href="#"> Icons</a>
-                    </li>
-                    <li>
-                        <a href="#">Grid</a>
+                        <a href="#">Role Setting</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Manager<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Second Level Item</a>
+                        <a href="#">List Form Input Pending</a>
                     </li>
                     <li>
-                        <a href="#">Second Level Item</a>
+                        <a href="#">List Form Out Pending</a>
                     </li>
                     <li>
                         <a href="#">Third Level <span class="fa arrow"></span></a>
