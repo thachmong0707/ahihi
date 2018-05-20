@@ -13,16 +13,16 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Content<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Chức năng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Create Form Input</a>
+                        <a href="FormInput.php">Tạo phiếu thu</a>
                     </li>
                     <li>
-                        <a href="#">Create Form Output</a>
+                        <a href="#">Tạo phiếu chi</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
@@ -31,25 +31,22 @@
                 <a href="#"><i class="fa fa-wrench fa-fw"></i> Admin<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="listUser.php">List User</a>
+                        <a href="listUser.php">Danh sách nhân viên</a>
                     </li>
                     <li>
-                        <a href="#">User Setting</a>
+                        <a href="#">Cài đặt</a>
                     </li>
                     <li>
-                        <a href="#">Role Setting</a>
+                        <a href="#">Phân quyèn</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Manager<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Quản lý<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">List Form Input Pending</a>
-                    </li>
-                    <li>
-                        <a href="#">List Form Out Pending</a>
+                        <a href="#">Duyệt phiếu chi</a>
                     </li>
                     <li>
                         <a href="#">Third Level <span class="fa arrow"></span></a>
