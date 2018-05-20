@@ -15,12 +15,10 @@
 
     <!-- Custom CSS -->
     <link href="../../static/admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../static/admin/dist/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../../static/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <!-- PHIEU THU -->
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+    <link href="../../static/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -19,10 +19,10 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Chức năng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="FormInput.php">Tạo phiếu thu</a>
+                        <a href="phieu-thu-tien-mat.php">Tạo phiếu thu</a>
                     </li>
                     <li>
-                        <a href="#">Tạo phiếu chi</a>
+                        <a href="phieu-thu-tien-mat.php">Tạo phiếu chi</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

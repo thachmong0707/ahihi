@@ -22,7 +22,7 @@ INSERT INTO `roles`(`id`, `name`) VALUES (3, 'admin');
 
 -- form_type
 INSERT INTO `form_type`(`id`, `name`) VALUES (1, 'input');
-INSERT INTO `form_type`(`id`, `name`) VALUES (2, 'output');\
+INSERT INTO `form_type`(`id`, `name`) VALUES (2, 'output');
 
 -- receipt_status
 
