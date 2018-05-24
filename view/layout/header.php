@@ -1,8 +1,7 @@
 <?php
     @session_start();
-    if(isset($_SESSION['uid'])){
-        echo "da dang nhap <br>";
-        echo "uid".$_SESSION['uid'];
+    if(!isset($_SESSION['uid'])){
+        header("Location:http://localhost:8888/ahihi/view/page/login.php");
     }
 ?>
 <head>
