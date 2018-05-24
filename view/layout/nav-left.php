@@ -46,7 +46,11 @@
                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> Quản lý<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Duyệt phiếu chi</a>
+                        <a href="duyetphieuchi.php">Duyệt phiếu chi</a>
+                    </li>
+
+                    <li>
+                        <a href="danhsachkhachhang.php">Danh sách khách hàng</a>
                     </li>
                     <li>
                         <a href="#">Third Level <span class="fa arrow"></span></a>

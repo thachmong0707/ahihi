@@ -16,10 +16,10 @@
           if ($result->num_rows > 0){
               $_SESSION['uid'] = mysqli_fetch_array($result)[0];
 
-              header("Location:http://localhost:8888/ahihi/view/page/index.php");
+              header("Location:http://localhost/ahihi/view/page/index.php");
           }
           else {
-              header("Location:http://localhost:8888/ahihi/view/page/login.php");
+              header("Location:http://localhost/ahihi/view/page/login.php");
           }
 
       }
