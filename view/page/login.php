@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="../../static/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<?php
-    include '../layout/header.php';
-?>
+<!-- MetisMenu CSS -->
+<link href="../../static/admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="../../static/admin/dist/css/sb-admin-2.css" rel="stylesheet">
+<link href="../../static/admin/dist/css/style.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="../../static/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <body>
 
     <div class="container">

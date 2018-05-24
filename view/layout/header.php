@@ -1,8 +1,7 @@
 <?php
     @session_start();
-    if(isset($_SESSION['uid'])){
-        echo "da dang nhap <br>";
-        echo "uid".$_SESSION['uid'];
+    if(!isset($_SESSION['uid'])){
+        header("Location:http://localhost/ahihi/view/page/login.php");
     }
 ?>
 <head>
@@ -26,6 +25,10 @@
 
     <!-- Custom Fonts -->
     <link href="../../static/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="../css/view-css.css">    
+    <link rel="stylesheet" type="text/css" href="../css/listUser.css">  
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
