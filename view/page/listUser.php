@@ -4,7 +4,7 @@
     include '../layout/header.php';
 ?>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="../css/listUser.css"
 <body>
 
@@ -18,7 +18,6 @@
             <!-- show List User -->
             <h2>Users</h2>
               <p>Show all user on database</p>
-<<<<<<< HEAD
              <div class="col-md-12">
 
                          <div class="table-responsive">
@@ -172,7 +171,7 @@
                          </div><!-- /.modal-content -->
                      </div><!-- /.modal-dialog -->
                  </div>
-=======
+
               <div class="table-responsive">
 
 
@@ -272,7 +271,6 @@
 
                       </div>
         </div>
->>>>>>> 77ecc6bb6b7233627e685914b0f6ec37c93de5c5
         <!-- /#page-wrapper -->
 
 

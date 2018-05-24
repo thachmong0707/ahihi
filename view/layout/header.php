@@ -26,12 +26,10 @@
 
     <!-- Custom Fonts -->
     <link href="../../static/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
 
     <link rel="stylesheet" type="text/css" href="../css/view-css.css">    
     <link rel="stylesheet" type="text/css" href="../css/listUser.css">  
-=======
->>>>>>> e309892e706dbb6762a9ad9f6bbf38d22c854992
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
