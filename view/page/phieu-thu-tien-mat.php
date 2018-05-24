@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include '../layout/header.php';
+    include '../layout/header.php';
 ?>
 <body>
 <div id="wrapper">
@@ -22,12 +22,11 @@ include '../layout/header.php';
 
         <div class="title">
             <p>PHIẾU THU TIỀN MẶT</p>
-
         </div>
 
 
         <div class="body" style="font-family: 'Times New Roman'; color: #0d6aad;">
-            <form role="form">
+            <form role="form" action="../../src/phieuthu/luuphieuthu.php" method="post">
             <div class="header">
                 <div class="clear" style="width: 100%;"></div>
                 <div class="num">
@@ -44,7 +43,7 @@ include '../layout/header.php';
                     <div class="clear" style="width: 100%;"></div>
                     <div class="ma-khach" style="width: 20%">
                         <label>Mã Khách:</label>
-                        <input class="form-control" name="" style="width: 40%">
+                        <input class="form-control" name="customerID" style="width: 40%">
                     </div>
                     <div class="ho-ten" style="width: 30%">
                         <label>Họ Tên:</label>
@@ -69,7 +68,11 @@ include '../layout/header.php';
                 <div>
                     <div class="ma-khach" style="width: 50%">
                         <label>Tài khoản:</label>
-                        <input class="form-control" name="" style="width: 20%;float: left;">
+                        <select class="select-acccount">
+                            <option value="N1111">N1111</option>
+                            <option value="N1112">N1112</option>
+                        </select>
+                       <!--  <input class="form-control" name="" style="width: 20%;float: left;"> -->
                         <input class="form-control" name="" style="width: 55%; color: #0d6aad; ">
                     </div>
 
@@ -174,11 +177,9 @@ include '../layout/header.php';
                     <input class="form-control" name="" style="width: 20%;float: left;">
                     <div class="clear" style="float:left;width: 100%;"></div>
                 </div>
-                <div>
-
-                    <input class="form-control" name="">
+                <div class="show-text-money">
+                    <label class="money">Số tiền:</label>
                     <div class="clear" style="float:left;width: 100%;"></div>
-
                 </div>
                 <div>
                     <button type="submit" class="btn btn-default">Lưu và In</button>
