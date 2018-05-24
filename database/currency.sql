@@ -1,6 +1,3 @@
-create database currency;
-use currency;
-
 create table roles
 (
 	id int primary key auto_increment,
@@ -17,22 +14,6 @@ create table users
     info text,
     role int,
     foreign key (role) references roles(id)
-);
-
-create table receipt_status
-(
-	id int primary key,
-	name text
-);
-
-create table receipts
-(
-	id int primary key auto_increment,
-    name text,
-    datecreate date,
-    money int,
-	status int,
-	foreign key (status) references receipt_status(id)
 );
 
 -- ex: N331 - phai tra cho nguoi ban
@@ -53,15 +34,9 @@ create table warehouse
 create table money_type
 (
 	id int primary key auto_increment,
+    unit text,
     name text,
     rate decimal(4,2)
-);
-
-create table units
-(
-	id int primary key auto_increment,
-    name text,
-    address text
 );
 
 create table customers
@@ -69,8 +44,7 @@ create table customers
 	id int primary key auto_increment,
     fullname text,
     address text,
-    unit int,
-    foreign key (unit) references units(id)
+    company text
 );
 
 -- table extension: info company
@@ -106,7 +80,7 @@ create table form
     total_money_text text,
     form_type int,
     account_type varchar(10),
-	receipt int,
+	receipt text,
     user int,
     customer int,
     warehouse int,
@@ -114,7 +88,6 @@ create table form
 	status int,
     foreign key (form_type) references form_type(id),
     foreign key (account_type) references account_type(id),
-    foreign key (receipt) references receipts(id),
     foreign key (user) references users(id),
     foreign key (customer) references customers(id),
     foreign key (warehouse) references warehouse(id),
