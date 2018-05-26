@@ -1,5 +1,5 @@
 <?php
-	include "../wrapper/config.php";
+	include "config.php";
 	$customerID ="";
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		 if(isset($_POST["customerID"])) { 
