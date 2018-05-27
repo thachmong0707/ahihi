@@ -4,7 +4,6 @@
 Về cơ bản thì WEB hiển thị Tiếng Việt
 Nhưng để cho khỏe thì ai code phần nào thì đặt tên tùy ý, miễn sao code chạy là đc :D
 
------ Trước mắt là code cho chạy trc đi cái đã, rồi sẽ thay toàn bộ UI cho đẹp :v
 
 ```
 
