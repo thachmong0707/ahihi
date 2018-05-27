@@ -1,6 +1,6 @@
 <?php
     @session_start();
-    if(!isset($_SESSION['uid'])){
+    if(!isset($_SESSION['userInfo'])){
         header("Location:http://localhost/ahihi/views/pages/login.php");
     }
 ?>
@@ -24,6 +24,7 @@
     <link href="../../vendor/admin/dist/css/style.css" rel="stylesheet">
     <!-- <link href="../../vendor/css/style.css" rel="stylesheet"> -->
     <!-- Custom Fonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <link href="../../vendor/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="../../vendor/css/view-css.css">
