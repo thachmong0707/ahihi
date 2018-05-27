@@ -23,28 +23,6 @@ $getWarehouse = $conn->query($sql_getWarehouse);
 $sql_getListCustomers = "select * from customers";
 $getListCustomers = $conn->query($sql_getListCustomers);
 
-
-if (isset($_POST['btn-save']) && ($_POST['btn-save'] == 'save')) {
-
-    $content = ($_POST['content']);
-    $total_money = $_POST['total_money'];
-
-
-    $sql_getID = "select max(id) form form";
-    $getID = $conn->query($sql_getID);
-
-    $sql = "INSERT INTO form(id, form_id, date_create, content, total_money, total_money_text, form_type, account_type, receipt, user, customer, warehouse, money_type, status) 
-VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười triệu', 2, '1111', 'chung tu goc', 1,1,1,1,2)";
-    // echo $sql;
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-// echo $content;
-
-}
 ?>
 <style>
     a:hover{
@@ -72,7 +50,7 @@ include '../layouts/header.php';
 
 
         <div class="body" style="font-family: 'Times New Roman'; color: #0d6aad;">
-            <form role="form" method="post" action="../../server/phieuchitienmat.php">
+            <form role="form" method="post" >
                 <div class="header">
                     <div class="clear" style="width: 100%;"></div>
                     <div class="num">
@@ -165,7 +143,7 @@ include '../layouts/header.php';
                                 <option>VND</option>
                                 <option>USD</option>
                             </select>
-                            <input class="form-control" name="" style="width: 55%">
+                            <input class="form-control" name="" id="money" style="width: 55%">
                         </div>
                         <div class="ma-khach" style="width: 20%">
                             <label style="float: left">Tỷ giá:</label>
@@ -176,7 +154,7 @@ include '../layouts/header.php';
                 </div>
 
                 <div class="table">
-                    <table class="table table-striped table-bordered table-hover">
+                    <table class="table table-striped table-bordered table-hover" id="table-phieuthu">
                         <thead>
                         <tr>
                             <th>TKĐU</th>
@@ -195,8 +173,8 @@ include '../layouts/header.php';
                             <td>- -</td>
                             <td></td>
                             <td></td>
-                            <td>19.032.871,00</td>
-                            <td>19.032.871</td>
+                            <td id="money-main"></td>
+                            <td id="money-VND">19.032.871</td>
                             <td></td>
                             <td>711389</td>
                         </tr>
@@ -289,7 +267,7 @@ include '../layouts/header.php';
                             echo "<tr><td>" . $row['fullname'] . "</td>";
                             echo "<td>" . $row['company'] . "</td>";
                             echo "<td>" . $row['address'] . "</td>";
-                            echo "<td><a class='btn' onclick='showCustomer()'><i style='color: green' class='fa fa-check-circle' aria-hidden='true'></i></a></td></tr>";
+                            echo "<td><a class='btn' id='choose'><i style='color: green' class='fa fa-check-circle' aria-hidden='true'></i></a></td></tr>";
                         }
                     } ?>
                     </tbody>
@@ -327,18 +305,31 @@ include '../layouts/script-footer.php';
             responsive: true
         });
 
-         $("#unitSpecies").change(function () {
+          $("#unitSpecies").change(function () {
             var unitSpecies = $('#unitSpecies').val();
-            var unit = $('#' + unit).attr("title");
-            $('#unit').attr('value', unit);
+            if(unitSpecies == 'VND'){
+                var unit = 1;
+                $('#unit').attr('value', unit);
+            }else{
+                var unit = 2;
+                $('#unit').attr('value', unit);
+            }
         });
+
+          $('#money').change(function(){
+            var money = $('#money').val();
+            $('#money-main').attr('value', money);
+           
+          });
 
     });
 
-    function showCustomer(){
-        var customerName = document.getElementById(td).value;
-       console.log(customerName);
-    }
+    $(function(){
+        $('#listCustomers tr td').click(function(e){
+            var customerID = $(this).closest('.onRow').find('td:nth-child(1)').text();
+            console.log(customerID);
+        });
+    });
 
 
 </script>
