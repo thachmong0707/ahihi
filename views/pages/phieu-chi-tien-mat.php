@@ -279,14 +279,6 @@ include '../layouts/header.php';
                 </div>
             </div>
             <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New
-                        </button>
-
-                    </div>
-                </div>
                 <form id="tableForm" method="post" action="../../server/form_detail.php">
                     <table class="table table-striped table-bordered table-hover edit-table" id="edit-table">
                         <thead>
@@ -335,6 +327,13 @@ include '../layouts/header.php';
                         </tr>
                         </tbody>
                     </table>
+                    <div class="table-title">
+                        <div class="row">
+                            <button type="button" class="btn btn-info add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="fa fa-plus"></i> Add New
+                            </button>
+
+                        </div>
+                    </div>
                     <button type="button" id="sendForm">submitform</button>
                 </form>
 

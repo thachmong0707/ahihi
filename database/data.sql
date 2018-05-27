@@ -1,7 +1,7 @@
 -- customers
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (1,'Nguyen Thi Hien', 'UIT', 'UIT');
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (2,'Nguyen Thi Cho', 'UIT', 'UIT');
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (3,'Nguyen Thi Kim Hoa', 'UIT', 'UIT');
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (1,'Nguyễn Thị Hiền', 'UIT', 'UIT');
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (2,'Trần Nguyễn Thị Thơm', 'KTX KHU B', 'KHTN');
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (3,'Nguyễn Thị Kim Hoa', 'Ling Trung', 'UIT');
 
 -- money_status
 INSERT INTO `money_type`(`id`,`unit`, `name`, `rate`) VALUES (1,'VND','đồng', 1.0);
@@ -10,6 +10,11 @@ INSERT INTO `money_type`(`id`,`unit`, `name`, `rate`) VALUES (2,'USD','dollar', 
 INSERT INTO `form_status`(`id`, `name`) VALUES (1, 'approved');
 INSERT INTO `form_status`(`id`, `name`) VALUES (2, 'pending');
 INSERT INTO `form_status`(`id`, `name`) VALUES (3, 'blocked');
+
+--form_detail
+INSERT INTO `contract_type`(`id`, `name`) VALUES (1, 'HĐ 1');
+INSERT INTO `contract_type`(`id`, `name`) VALUES (2, 'HĐ 2');
+INSERT INTO `contract_type`(`id`, `name`) VALUES (3, 'HĐ 3');
 
 -- roles
 INSERT INTO `roles`(`id`, `name`) VALUES (1, 'employee');
