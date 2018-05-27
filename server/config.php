@@ -4,7 +4,7 @@
 	$SERVER = "localhost";
 	$USERNAME = "root";
 	$PASSWORD = "";
-	$DBNAME = "currency";
+	$DBNAME = "curency";
 	// Create connection
 	$conn = new mysqli($SERVER, $USERNAME, $PASSWORD, $DBNAME);
 	mysqli_set_charset($conn, 'UTF8');
