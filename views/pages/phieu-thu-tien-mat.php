@@ -6,7 +6,7 @@ $sql_getID = "select max(id) from form";
 $getID = $conn->query($sql_getID);
 $id = (int)mysqli_fetch_array($getID)[0] + 1;
 $currentDate = date("d-m-y");
-$STT = "CTM" . $id . $currentDate;
+$STT = "TTM" . $id . $currentDate;
 
 // Load AccountType into select options
 // load STT
@@ -50,7 +50,7 @@ include '../layouts/header.php';
 
 
         <div class="body" style="font-family: 'Times New Roman'; color: #0d6aad;">
-            <form role="form" method="post" >
+            <form role="form" method="post" action="../../server/luuphieuthu.php">
                 <div class="header">
                     <div class="clear" style="width: 100%;"></div>
                     <div class="num">
@@ -68,7 +68,7 @@ include '../layouts/header.php';
                         <div class="clear" style="width: 100%;"></div>
                         <div class="ma-khach" style="width: 20%">
                             <label>Mã Khách:</label>
-                            <input class="form-control" name="" id="customerID" style="width: 40%" disabled>
+                            <input class="form-control" name="" id="customerID" style="width: 40%; background-color: white;" disabled>
                         </div>
                         <div class="ho-ten" style="width: 30%">
                             <label>Họ Tên:</label>
@@ -130,11 +130,11 @@ include '../layouts/header.php';
                                 if ($getWarehouse->num_rows > 0) {
                                     // output data of each row
                                     while ($row = $getWarehouse->fetch_assoc()) {
-                                        echo "<option id='" . $row['name'] . "' class='" . $row['id'] . "' title='".$row['address']."'>" . $row['name'] . "</option>";
+                                        echo "<option id='" . $row['id'] . "' class='" . $row['name'] . "' title='".$row['address']."'>" . $row['id'] . "</option>";
                                     }
                                 } ?>
                             </select>
-                            <input class="form-control" id="wareHouseAddress" style="width: 55%; color: #0d6aad; ">
+                            <input class="form-control" id="wareHouseName" style="width: 55%; color: #0d6aad; ">
                         </div>
 
                         <div class="don-vi" style="width: 50%">
@@ -147,7 +147,7 @@ include '../layouts/header.php';
                         </div>
                         <div class="ma-khach" style="width: 20%">
                             <label style="float: left">Tỷ giá:</label>
-                            <input class="form-control" name="" id="unit" style="width:68%">
+                            <input class="form-control" name="" id="unit" style="width:68%; background-color: white;" disabled="">
                         </div>
                         <div class="clear" style="width: 100%;"></div>
                     </div>
@@ -169,13 +169,13 @@ include '../layouts/header.php';
                         </thead>
                         <tbody>
                         <tr>
-                            <td>N331</td>
+                            <td>C331</td>
                             <td>- -</td>
                             <td></td>
                             <td></td>
-                            <td id="money-main"></td>
-                            <td id="money-VND">19.032.871</td>
-                            <td></td>
+                            <td style="width:5%"><input name="" id="money-number" style="border: none; background-color: #f5f5f5;" disabled></td>
+                            <td style="width:5%"><input name="" id="money-number-VND" style="border: none; background-color: #f5f5f5;" disabled></td>
+                            <td><input name="" id="unit-column" style="border: none; width:35px; background-color: #f5f5f5;" disabled></td>
                             <td>711389</td>
                         </tr>
                         <tr>
@@ -215,7 +215,7 @@ include '../layouts/header.php';
                     <div>
                         <input class="form-control" name="" style="width: 50%;float: left;">
                         <label style="margin-left:10px; float: left; font-size: 20px"> Tổng số tiền: </label>
-                        <input class="form-control" name="total_money" style="width: 20%;float: left;">
+                        <input class="form-control" name="total_money" id="total_money" style="width: 20%;float: left; background-color: white" disabled>
                         <div class="clear" style="float:left;width: 100%;"></div>
                     </div>
                     <div>
@@ -249,6 +249,7 @@ include '../layouts/header.php';
                 <table width="100%" class="table table-striped table-bordered table-hover" id="listCustomers">
                     <thead>
                     <tr>
+                        <th>Mã KH</th>
                         <th>Họ và tên</th>
                         <th>Công ty</th>
                         <th>Địa chỉ</th>
@@ -264,17 +265,15 @@ include '../layouts/header.php';
                     if ($getListCustomers->num_rows > 0) {
                         // output data of each row
                         while ($row = $getListCustomers->fetch_assoc()) {
-                            echo "<tr><td>" . $row['fullname'] . "</td>";
+                            echo "<tr class='onRow'><td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['fullname'] . "</td>";
                             echo "<td>" . $row['company'] . "</td>";
                             echo "<td>" . $row['address'] . "</td>";
-                            echo "<td><a class='btn' id='choose'><i style='color: green' class='fa fa-check-circle' aria-hidden='true'></i></a></td></tr>";
+                            echo "<td><a class='btn' data-dismiss='modal'><i style='color: green' class='fa fa-check-circle' aria-hidden='true'></i></a></td></tr>";
                         }
                     } ?>
                     </tbody>
                 </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -295,9 +294,8 @@ include '../layouts/script-footer.php';
 
         $("#wareHouseId").change(function () {
             var wareHouseId = $('#wareHouseId').val();
-            var wareHouseAddress = $('#' + wareHouseId).attr("title");
-            $('#wareHouseAddress').attr('value', wareHouseAddress);
-            debugger;
+            
+
         });
 
 
@@ -318,18 +316,33 @@ include '../layouts/script-footer.php';
 
           $('#money').change(function(){
             var money = $('#money').val();
-            $('#money-main').attr('value', money);
-           
+            var unit = $('#unit').val();
+            $('#money-number').attr('value', money);
+            $('#unit-column').attr('value', unit);
+            if(unit == 1){
+                $('#money-number-VND').attr('value', money);
+                $('#total_money').attr('value', money);
+            }else if(unit == 2){
+                $('#money-number-VND').attr('value', money * 22768);
+                $('#total_money').attr('value', money * 22768);
+            }
           });
 
     });
 
     $(function(){
-        $('#listCustomers tr td').click(function(e){
-            var customerID = $(this).closest('.onRow').find('td:nth-child(1)').text();
-            console.log(customerID);
+        $('#listCustomers tr').click(function (e){
+            var id = $(this).closest('.onRow').find('td:nth-child(1)').text();
+            var name = $(this).closest('.onRow').find('td:nth-child(2)').text();
+            var company = $(this).closest('.onRow').find('td:nth-child(3)').text();
+            var address = $(this).closest('.onRow').find('td:nth-child(4)').text();
+
+            $('#customerID').val(id);
+            $('#customerName').val(name);
+            $('#customerUnit').val(address);
+            $('#customerAddress').val(address);
         });
-    });
+    }); 
 
 
 </script>
