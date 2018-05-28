@@ -36,11 +36,6 @@
 }
 
 .avatar>img {
-    border-radius: 50%;
-<<<<<<< HEAD
+    border-radius: 10%;
+    width: 150px;
 }
-=======
-}
-
-
->>>>>>> 77ecc6bb6b7233627e685914b0f6ec37c93de5c5
