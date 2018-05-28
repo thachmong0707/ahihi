@@ -37,6 +37,9 @@ INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`,
 	VALUES (2,'lingntd','admin','Duy Linh', '', 'HTTT2014', 2);
 INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`, `role`) 
 	VALUES (3,'namtc','admin','Tran Chi Nam', '', 'HTTT2014', 3);
+INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`, `role`) 
+	VALUES (4,'uyenvhl','admin','Vo Huyen Lan Uyen', 'sample.png', 'HTTT2014', 3);
+	
 
 
 INSERT INTO account_type VALUES ('001', '  Tài sản thuê ngoài');

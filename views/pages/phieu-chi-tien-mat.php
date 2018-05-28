@@ -545,7 +545,7 @@ include '../layouts/script-footer.php';
                 '<td><input type="text" class="form-control" value=" "></td>' +
                 '<td><input type="text" class="form-control" value=" "></td>' +
                 '<td><input type="text" class="form-control"></td>' +
-                '<td><input type="text" class="form-control"></td>' +
+                '<td><input type="text" class="form-control" disabled></td>' +
                 '<td><input type="text" class="form-control" value=" "></td>' +
                 '<td><input type="text" class="form-control"></td>' +
                 '<td>' + actions + '</td>' +

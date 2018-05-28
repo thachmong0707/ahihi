@@ -111,6 +111,7 @@ create table form_detail
     money_vnd int,
     date_create date,
 	contract_type int,
+    primary key (form_id, account_type),
     foreign key (form_id) references form(id),
     foreign key (account_type) references account_type(id),
     foreign key (contract_type) references contract_type(id)
