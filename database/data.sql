@@ -1,29 +1,36 @@
--- customers
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (1,'Nguyen Thi Hien', 'UIT', 'UIT');
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (2,'Nguyen Thi Cho', 'UIT', 'UIT');
-INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (3,'Nguyen Thi Kim Hoa', 'UIT', 'UIT');
 
--- money_status
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (1,'Nguyễn Thị Hiền', 'UIT', 'UIT');
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (2,'Trần Nguyễn Thị Thơm', 'KTX KHU B', 'KHTN');
+INSERT INTO `customers`(`id`, `fullname`, `address`, `company`) VALUES (3,'Nguyễn Thị Kim Hoa', 'Ling Trung', 'UIT');
+
+
 INSERT INTO `money_type`(`id`,`unit`, `name`, `rate`) VALUES (1,'VND','đồng', 1.0);
 INSERT INTO `money_type`(`id`,`unit`, `name`, `rate`) VALUES (2,'USD','dollar', 2.2);
--- form_status
+
 INSERT INTO `form_status`(`id`, `name`) VALUES (1, 'approved');
 INSERT INTO `form_status`(`id`, `name`) VALUES (2, 'pending');
 INSERT INTO `form_status`(`id`, `name`) VALUES (3, 'blocked');
 
--- roles
+
+INSERT INTO `contract_type`(`id`, `name`) VALUES (1, 'HĐ 1');
+INSERT INTO `contract_type`(`id`, `name`) VALUES (2, 'HĐ 2');
+INSERT INTO `contract_type`(`id`, `name`) VALUES (3, 'HĐ 3');
+
+
 INSERT INTO `roles`(`id`, `name`) VALUES (1, 'employee');
 INSERT INTO `roles`(`id`, `name`) VALUES (2, 'manager');
 INSERT INTO `roles`(`id`, `name`) VALUES (3, 'admin');
 
--- form_type
+
 INSERT INTO `form_type`(`id`, `name`) VALUES (1, 'input');
 INSERT INTO `form_type`(`id`, `name`) VALUES (2, 'output');
 
--- warehouse
-INSERT INTO `warehouse`(`id`, `name`, `address`) VALUES (1, 'UIT warehouse', 'Linh Trung, Thủ Đức');
 
--- users
+INSERT INTO `warehouse`(`id`, `name`, `address`) VALUES (1, 'UIT-Warehouse', 'Linh Trung, Thủ Đức');
+INSERT INTO `warehouse`(`id`, `name`, `address`) VALUES (2, 'KTX-WareHouse', 'KTX, Dĩ An, Bình Dương');
+INSERT INTO `warehouse`(`id`, `name`, `address`) VALUES (3, 'XYZ-warehouse', 'Hà Nội');
+
+
 INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`, `role`) 
 	VALUES (1,'mongnt','admin','Nguyen Thach Mong', '', 'HTTT2014', 1);
 INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`, `role`) 
@@ -31,7 +38,7 @@ INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`,
 INSERT INTO `users`(`id`, `username`, `password`, `fullname`, `picture`, `info`, `role`) 
 	VALUES (3,'namtc','admin','Tran Chi Nam', '', 'HTTT2014', 3);
 
--- account_type
+
 INSERT INTO account_type VALUES ('001', '  Tài sản thuê ngoài');
 INSERT INTO account_type VALUES ('002', '  Vật tư, hàng hóa nhận giữ hộ, nhận gia công');
 INSERT INTO account_type VALUES ('003', '  Hàng hóa nhận bán hộ, nhận ký gửi, ký cược');
@@ -405,7 +412,7 @@ INSERT INTO account_type VALUES ('8212', '   Chi phí thuế thu nhập doanh ng
 INSERT INTO account_type VALUES ('9', 'IX - Xác định kết quả kinh doanh');
 INSERT INTO account_type VALUES ('911', '  Xác định kết quả kinh doanh');
 
--- form
+
 INSERT INTO `form`(`id`, `form_id`, `date_create`, `content`, `total_money`, `total_money_text`, `form_type`, `account_type`, `receipt`, `user`, `customer`, `warehouse`, `money_type`, `status`) 
 VALUES (1, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười triệu', 2, '1111', 'chung tu goc', 1,1,1,1,1);
 INSERT INTO `form`(`id`, `form_id`, `date_create`, `content`, `total_money`, `total_money_text`, `form_type`, `account_type`, `receipt`, `user`, `customer`, `warehouse`, `money_type`, `status`) 

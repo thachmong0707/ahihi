@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8b794b-d9ca-4686-8a31-fd0e7d0044ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/layout/header.php" afterPath="$PROJECT_DIR$/view/layout/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/page/listUser.php" afterPath="$PROJECT_DIR$/view/page/listUser.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/server/luuphieuthu.php" afterPath="$PROJECT_DIR$/server/luuphieuthu.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/admin/dist/js/sb-admin-2.js" afterPath="$PROJECT_DIR$/vendor/admin/dist/js/sb-admin-2.js" />
+      <change beforePath="$PROJECT_DIR$/vendor/css/style.css" afterPath="$PROJECT_DIR$/vendor/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" afterPath="$PROJECT_DIR$/views/layouts/header.php" />
+      <change beforePath="$PROJECT_DIR$/views/pages/phieu-chi-tien-mat.php" afterPath="$PROJECT_DIR$/views/pages/phieu-chi-tien-mat.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +19,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileColors">
     <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
     <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
@@ -28,55 +30,136 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="4E5579" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="listUser.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/page/listUser.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="phieu-chi-tien-mat.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/pages/phieu-chi-tien-mat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/layout/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listUser.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/css/listUser.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="-2154">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
-                <marker date="1527154110380" expanded="true" signature="491:593" ph="{...}" />
+                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1527332603562" expanded="true" signature="86:110" ph="select max(i... form" />
+                <marker date="1527332603562" expanded="true" signature="335:361" ph="select * fro... account_type" />
+                <marker date="1527332603562" expanded="true" signature="495:509" ph="select max(i... form" />
+                <marker date="1527332603562" expanded="true" signature="495:518" ph="select * fro... warehouse" />
+                <marker date="1527332603562" expanded="true" signature="615:638" ph="select * fro... customers" />
+                <marker date="1527332603562" expanded="true" signature="945:1228" ph="INSERT INTO form... " />
+                <marker date="1527332603562" expanded="true" signature="1552:1561" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="4932:5105" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="5157:5185" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="5282:5541" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="5703:5729" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6111:6137" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6488:8085" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6554:7036" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6554:7405" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6598:6608" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6704:6727" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="6728:7036" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="7345:7373" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="7470:7736" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="7802:7987" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8145:10314" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8228:10291" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8260:8709" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8289:8676" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8741:10262" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="8770:9140" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="9169:9503" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="9532:9866" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="9895:10229" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="10351:11268" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="10377:10793" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="10819:10991" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="10933:10956" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11017:11245" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11486:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11542:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11578:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11617:11890" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11710:11775" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="11736:11743" ph="×" />
+                <marker date="1527332603562" expanded="true" signature="11927:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="12038:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="12066:12314" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="12091:12285" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="12342:12791" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="12453:12476" ph="select * fro... customers" />
+                <marker date="1527332603562" expanded="true" signature="13016:13028" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="13201:13243" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="13258:13375" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="13514:13551" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="13514:13562" ph="..." />
+                <marker date="1527332603562" expanded="true" signature="13514:13627" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <file leaf-file-name="phieuchitienmat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/phieuchitienmat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="260">
+              <caret line="66" column="64" lean-forward="false" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+              <folding>
+                <marker date="1527323820421" expanded="true" signature="86:110" ph="select max(i... form" />
+                <marker date="1527323820421" expanded="true" signature="335:361" ph="select * fro... account_type" />
+                <marker date="1527323820421" expanded="true" signature="495:518" ph="select * fro... warehouse" />
+                <marker date="1527323820421" expanded="true" signature="874:1157" ph="INSERT INTO form... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layouts/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="23" column="72" lean-forward="false" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/javascript/modal.js">
+      <file leaf-file-name="phieu-thu-tien-mat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/phieu-thu-tien-mat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="374">
+              <caret line="75" column="97" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="97" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phieuchitienmat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/phieuchitienmat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <marker date="1527314847078" expanded="true" signature="265:551" ph="INSERT INTO form... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1527183137900" expanded="true" signature="347:433" ph="SELECT id FR... users" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,6 +170,18 @@
     <findStrings>
       <find>showMo</find>
       <find>ava</find>
+      <find>Tài khoản</find>
+      <find>tài khoản</find>
+      <find>accountName</find>
+      <find>địa chỉ</find>
+      <find>$getAccountType</find>
+      <find>btn-showListCustomers</find>
+      <find>listCustomersModal</find>
+      <find>kho</find>
+      <find>address</find>
+      <find>wareHouseAddress</find>
+      <find>wareHouseId</find>
+      <find>$row</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,6 +195,10 @@
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/view/layout/header.php" />
         <option value="$PROJECT_DIR$/view/page/listUser.php" />
+        <option value="$PROJECT_DIR$/server/phieuchitienmat.php" />
+        <option value="$PROJECT_DIR$/views/layouts/header.php" />
+        <option value="$PROJECT_DIR$/views/pages/phieuchitienmat.php" />
+        <option value="$PROJECT_DIR$/views/pages/phieu-chi-tien-mat.php" />
       </list>
     </option>
   </component>
@@ -109,6 +208,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -133,134 +233,35 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounting" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ahihi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ahihi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ahihi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ahihi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ahihi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ahihi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ahihi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ahihi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ahihi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ahihi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -268,8 +269,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -329,9 +330,6 @@
       <option name="filePath" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -352,9 +350,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -365,25 +374,28 @@
       <updated>1527149160874</updated>
       <workItem from="1527149164222" duration="2110000" />
       <workItem from="1527151432910" duration="3072000" />
+      <workItem from="1527314240905" duration="16869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5182000" />
+    <option name="totallyTimeSpent" value="22051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15279879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -412,7 +424,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -422,14 +434,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/admin/js/sb-admin-2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/page/login.php">
+    <entry file="file://$PROJECT_DIR$/static/admin/js/sb-admin-2.js" />
+    <entry file="file://$PROJECT_DIR$/view/page/login.php" />
+    <entry file="file://$PROJECT_DIR$/view/javascript/modal.js" />
+    <entry file="file://$PROJECT_DIR$/view/img/avatar.png" />
+    <entry file="file://$PROJECT_DIR$/view/css/listUser.css" />
+    <entry file="file://$PROJECT_DIR$/static/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/view/layout/header.php" />
+    <entry file="file://$PROJECT_DIR$/view/page/listUser.php" />
+    <entry file="file://$PROJECT_DIR$/server/luuphieuthu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -437,50 +450,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/javascript/modal.js">
+    <entry file="file://$PROJECT_DIR$/views/pages/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/img/avatar.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/listUser.css">
+    <entry file="file://$PROJECT_DIR$/server/phieuchitienmat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <marker date="1527154110380" expanded="true" signature="491:593" ph="{...}" />
+            <marker date="1527314847078" expanded="true" signature="265:551" ph="INSERT INTO form... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/views/pages/phieu-thu-tien-mat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="374">
+          <caret line="75" column="97" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="97" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/layout/header.php">
+    <entry file="file://$PROJECT_DIR$/vendor/admin/vendor/jquery/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="72" lean-forward="false" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/page/listUser.php">
+    <entry file="file://$PROJECT_DIR$/views/pages/phieuchitienmat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="66" column="64" lean-forward="false" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+          <folding>
+            <marker date="1527323820421" expanded="true" signature="86:110" ph="select max(i... form" />
+            <marker date="1527323820421" expanded="true" signature="335:361" ph="select * fro... account_type" />
+            <marker date="1527323820421" expanded="true" signature="495:518" ph="select * fro... warehouse" />
+            <marker date="1527323820421" expanded="true" signature="874:1157" ph="INSERT INTO form... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1527183137900" expanded="true" signature="347:433" ph="SELECT id FR... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/phieu-chi-tien-mat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2154">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1527332603562" expanded="true" signature="86:110" ph="select max(i... form" />
+            <marker date="1527332603562" expanded="true" signature="335:361" ph="select * fro... account_type" />
+            <marker date="1527332603562" expanded="true" signature="495:509" ph="select max(i... form" />
+            <marker date="1527332603562" expanded="true" signature="495:518" ph="select * fro... warehouse" />
+            <marker date="1527332603562" expanded="true" signature="615:638" ph="select * fro... customers" />
+            <marker date="1527332603562" expanded="true" signature="945:1228" ph="INSERT INTO form... " />
+            <marker date="1527332603562" expanded="true" signature="1552:1561" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="4932:5105" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="5157:5185" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="5282:5541" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="5703:5729" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6111:6137" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6488:8085" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6554:7036" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6554:7405" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6598:6608" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6704:6727" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="6728:7036" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="7345:7373" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="7470:7736" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="7802:7987" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8145:10314" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8228:10291" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8260:8709" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8289:8676" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8741:10262" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="8770:9140" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="9169:9503" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="9532:9866" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="9895:10229" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="10351:11268" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="10377:10793" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="10819:10991" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="10933:10956" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11017:11245" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11486:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11542:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11578:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11617:11890" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11710:11775" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="11736:11743" ph="×" />
+            <marker date="1527332603562" expanded="true" signature="11927:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="12038:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="12066:12314" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="12091:12285" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="12342:12791" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="12453:12476" ph="select * fro... customers" />
+            <marker date="1527332603562" expanded="true" signature="13016:13028" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="13201:13243" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="13258:13375" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="13514:13551" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="13514:13562" ph="..." />
+            <marker date="1527332603562" expanded="true" signature="13514:13627" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
