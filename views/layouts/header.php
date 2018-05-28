@@ -11,7 +11,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="../../vendor/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
