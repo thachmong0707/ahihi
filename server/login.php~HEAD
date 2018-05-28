@@ -3,27 +3,18 @@
     include 'config.php';
 
     if(isset ($_POST['btn_login']) && ($_POST['btn_login']=='Login') ) {
-      // if(isset($_POST['username'])  && isset($_POST['password'])){
           $username = $_POST['username'];
           $password = $_POST['password'];
-    // }else{
-    //     echo "that bai";
-    // }
-      $sql = "SELECT id FROM users where username ='". $username ."'  and password = '".$password."' ";
+      $sql = "SELECT * FROM users where username ='". $username ."'  and password = '".$password."' ";
       // echo $sql;
       $result = $conn->query($sql);
-
           if ($result->num_rows > 0){
-              $_SESSION['uid'] = mysqli_fetch_array($result)[0];
-
+              $_SESSION['userInfo'] = mysqli_fetch_array($result);
               header("Location:http://localhost/ahihi/views/pages/index.php");
           }
           else {
               header("Location:http://localhost/ahihi/views/pages/login.php");
           }
-
       }
-      // while ( $row = mysqli_fetch_row($result) ) {
-      //     echo "id:".$row[0]."<br>\n";
-      //     echo "fullname:".$row[1]."<br>\n";
+
 ?>
