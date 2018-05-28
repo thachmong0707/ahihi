@@ -1,153 +1,139 @@
-
-
+</html>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <?php
     include '../layouts/header.php';
 ?>
 
-<?php
-    
+    <?php
+
     include '../../server/config.php';
      $sql = " SELECT * FROM customers";
- 
+
     // Thực thi câu truy vấn và gán vào $result
     $result = $conn->query($sql);
- ?> 
-<body>
+ ?>
 
-    <div id="wrapper">
+        <body>
 
-        <div id="page-wrapper" style="margin-left: 200px; margin-right: 200px">
-        	<div class="row" >
-        		<input type="button" style="float: right;margin-top: 20px" name="in-pdf" value="IN PHIẾU">
-        	</div>
-            <div class="row">
-                <div class="col-lg-6" >
-                    <h3>CÔNG TY ĐẠI HƯNG PHÁT</h3>
-                    <h5 style="padding-left: 70px">17- P.KD VLXH (BH)</h5>
+            <style type="text/css">
+                .header-title {
+                    padding: 15px 5px 15px 5px;
+                }
+                
+                .body-content {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+                
+                .info {
+                    color: blue;
+                }
+                
+                .padding-row {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                .body-content {
+                    padding-top: 40px;
+                    padding-bottom: 40px: 
+                    background-color: black;
+                }
+            </style>
+            <div class="container">
+                <div class="body-content">
+                <div class="header-title">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1 col-xs-6">
+                            <h3 class="text-center">CÔNG TY ĐẠI HƯNG PHÁT</h3>
+                            <h5 class="text-center">17- P.KD VLXH (BH)</h5>
+                        </div>
+                        <div class="col-md-4 col-md-offset-1 col-xs-6">
+                            <h6 class="text-center">Mẫu số 02 -TT</h6>
+                            <h5 class="text-center">( Ban hành theo QĐ số 15/2016/QĐ-BTC <br> ngày 20/03/2006 của Bộ trưởng BTC )</h5>
+                        </div>
+
+                    </div>
+                    <div class="row text-center">
+                        <h2><strong>PHIẾU CHI</strong></h2></div>
                 </div>
 
-                <div class="col-lg-6" style="text-align: center;" >
-                    <h6 ><b>Mẫu số 02 -TT</b> </h6>
-                    <h5>( Ban hành theo QĐ số 15/2016/QĐ-BTC <br> ngày 20/03/2006 của Bộ trưởng BTC )</h5>
+                <div class="body-content">
+                    <!-- <form class=""> -->
+                    <div class="row padding-row">
+                        <div class="col-md-5 col-md-offset-1 col-sm-5 col-xs-6">
+                            <label>Người nhận tiền</label>
+                            <label class="info">Đặng Minh Tâm (09001305</label>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label>Địa chỉ:</label>
+                            <label class="info">Kho Trà Nóc: Đặng Minh Tâm</label>
+                        </div>
+                    </div>
+                    <div class="row padding-row">
+                        <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
+                            <label>Lý do chi: </label>
+                            <label class="info">Phí vận chuyển xi măng</label>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <label>Số tiền:</label>
+                            <label class="info">1.650.000</label>
+                        </div>
+                    </div>
+                    <div class="row padding-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <label>Chứng từ gốc:</label>
+                            <label class="info">HĐ 164</label>
+                        </div>
+                    </div>
+                    <div class="row padding-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <label>Viết bằng chữ: </label>
+                            <label class="info">(Một triệu sáu trăm năm mươi ngàn đồng chẵn)</label>
+                        </div>
+                    </div>
                 </div>
-                <!-- /.col-lg-12 -->
+                <div class="table-detail">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Mã số</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>TKDU</th>
+                                        <th>Số tiền</th>
+                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>71009613</th>
+                                        <th>Cty TNHH MTV NNK Khánh Vinh</th>
+                                        <th>1.500.000</th>
+                                        <th>1.500.000</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th>71009613</th>
+                                        <th>Cty TNHH MTV NNK Khánh Vinh</th>
+                                        <th>1.500.000</th>
+                                        <th>1.500.000</th>
+                                    </tr>
+                                     <tr>
+                                        <th class="text-right" colspan="3">Tổng tiền</th>
+                                        <th>1.500.000</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    
+                </div>
             </div>
-
-			<div class="row">
-				<div class="col-lg-6" >
-                    <h3 style="float: right;display: block;color: red">PHIẾU CHI</h3>
-                    
-                </div>				
-				<div class="col-lg-6 col-md-pull-1" >
-                    
-                    <h5 style="float: right;display: block;"> Số: CTM0125-16-96</h5>
-                </div>				
-				
-			</div>
-
-			<div class="row">
-				<div class="col-lg-6">
-					<h5><b>Người nhận tiền: <a href="">Đặng Minh Tâm (09001305)</a></b></h5>
-				</div>
-				<div class="col-lg-6 col-lg-pull-1" >
-					<h5><b>Địa chỉ: <a href=""> Kho Trà Nóc: Đặng Minh Tâm</a></b></h5>
-				</div>
-				
-				
-			</div>
-
-			<div class="row">
-				<div class="col-lg-6">
-					<h5><b>Lý do chi: <a href=""> Phí vận chuyển xi măng</a></b></h5>
-				</div>
-				<div class="col-lg-6 col-lg-push-2" >
-					<h5><b>Số tiền:<a href="">1.650.000</a></b></h5>
-				</div>
-				
-				
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<h5><b>Chứng từ gốc: <a href=""> HĐ 164</a></b></h5>
-				</div>
-				<div class="col-lg-12">
-					<h5><b>Viết bằng chữ: <a href="">(Một triệu sáu trăm năm mươi ngàn đồng chẵn)</a></b></h5>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-8">
-					
-						<table class="table">
-			                <thead>
-			                  <tr>
-			                    <th>Mã số</th>
-			                    <th>Tên khách hàng</th>
-			                    <th>Số tiền</th>
-			                                      
-			                  </tr>
-			                </thead>
-			                <tbody>                  
-			                    <tr>
-			                        <th>71009613</th>                     
-			                        <th>Cty TNHH MTV NNK Khánh Vinh</th>                     
-			                        <th>1.500.000</th>                     
-			                    </tr>  
-
-			                    <tr>
-			                        <th>71009613</th>                     
-			                        <th>Cty TNHH MTV NNK Khánh Vinh</th>                     
-			                        <th>1.500.000</th>                     
-			                    </tr>                 
-			                </tbody>
-	              		</table>
-				</div>
-
-				<div class="col-lg-3">
-					
-						<table class="table">
-			                <thead>
-			                  <tr>
-			                    <th>Mã số</th>
-			                    
-			                    <th>Số tiền</th>
-			                                      
-			                  </tr>
-			                </thead>
-			                <tbody>                  
-			                    <tr>
-			                        <th>71009613</th>                     
-			                        <th>Cty</th>                     
-			                                        
-			                    </tr> 
-
-
-			                    <tr>
-			                        <th>71009613</th>                     
-			                        <th>Cty</th>                     
-			                                        
-			                    </tr>                 
-			                </tbody>
-	              		</table>
-					
-				</div>
-				
-			</div>
-            <!-- /.row -->
-           
-           <!--  <h3>
-            	<button type="button" class="btn btn-default">THÊM</button>
-            	<button type="button" class="btn btn-default">SỬA</button>
-            	<button type="button" class="btn btn-default">XÓA</button>
-            </h3>     -->        
-           
         </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-</body>
+        </body>
 
 </html>

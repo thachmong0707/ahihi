@@ -101,7 +101,7 @@ include '../layouts/header.php';
                                 if ($getAccountType->num_rows > 0) {
                                     // output data of each row
                                     while ($row = $getAccountType->fetch_assoc()) {
-                                        echo "<option id='" . $row['id'] . "' class='" . $row['name'] . "'>C" . $row['id'] . "</option>";
+                                        echo "<option id='" . $row['id'] . "' class='" . $row['name'] . "'>N" . $row['id'] . "</option>";
                                     }
                                 } ?>
                             </select>
