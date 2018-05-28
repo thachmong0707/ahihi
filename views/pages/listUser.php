@@ -4,6 +4,33 @@
     include '../layouts/header.php';
 ?>
 
+<?php
+    include "../../server/config.php";
+    $sql_getUser = "select id, fullname, username, role, info from users";
+    $getUser = $conn->query($sql_getUser);
+    $users = mysqli_fetch_all($getUser);
+    $renderString = "";
+    foreach($users as $user) {
+        $renderString = $renderString."<tr>";
+        foreach($user as $attr) {
+            $renderString = $renderString."<td>".$attr."</td>" ;
+        }
+
+
+
+        $renderString = $renderString."<td>
+                                              <p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Xem\">
+                                                   <button  class=\"btn btn-primary btn-xs showModal\" data-title=\"Edit\" data-toggle=\"modal\"
+                                                            data-target=\"#edit\">Xem
+                                                   </button>
+                                              </p>
+                                          </td>";
+
+        $renderString = $renderString."</tr>";
+
+    }
+?>
+
 
 <link rel="stylesheet" href="../../vendor/css/listUser.css"
 <body>
@@ -19,88 +46,24 @@
             <h2>Users</h2>
               <p>Show all user on database</p>
              <div class="col-md-12">
-
                          <div class="table-responsive">
-
 
                              <table id="mytable" class="table table-bordred table-striped">
 
                                  <thead>
-                                 <th>STT</th>
-                                 <th>Họ tên</th>
-                                 <th>Username</th>
-                                 <th>Role</th>
-                                 <th>Xem chi tiết</th>
+                                     <th>STT</th>
+                                     <th>Họ tên</th>
+                                     <th>Username</th>
+                                     <th>Role</th>
+                                     <th>Xem chi tiết</th>
+                                     <th> More </th>
 
                                  </thead>
 
                                  <tbody>
-                                 <tr>
-                                     <td>1</td>
-                                     <td>Võ Huyền Lan Uyên</td>
-                                     <td>lanuyen.uit</td>
-                                     <td>employee</td>
-                                     <td>
-                                         <p data-placement="top" data-toggle="tooltip" title="Xem">
-                                             <button  class="btn btn-primary btn-xs showModal" data-title="Edit" data-toggle="modal"
-                                                      data-target="#edit">Xem
-                                             </button>
-                                         </p>
-                                     </td>
-                                 </tr>
-
-                                 <tr>
-                                     <td>2</td>
-                                     <td>Nguyễn Thị Hiền</td>
-                                     <td>hien.uit</td>
-                                     <td>employee</td>
-                                     <td>
-                                         <p data-placement="top" data-toggle="tooltip" title="Xem">
-                                             <button class="btn btn-primary btn-xs showModal" data-title="Edit" data-toggle="modal"
-                                                     data-target="#edit">Xem
-                                             </button>
-                                         </p>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td>3</td>
-                                     <td>Lê Thiện Bảo</td>
-                                     <td>bao.uit</td>
-                                     <td>employee</td>
-                                     <td>
-                                         <p data-placement="top" data-toggle="tooltip" title="Xem">
-                                             <button class="btn btn-primary btn-xs showModal" data-title="Edit" data-toggle="modal"
-                                                     data-target="#edit">Xem
-                                             </button>
-                                         </p>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td>4</td>
-                                     <td>Nguyễn Trọng Duy Linh</td>
-                                     <td>linh.uit</td>
-                                     <td>employee</td>
-                                     <td>
-                                         <p data-placement="top" data-toggle="tooltip" title="Xem">
-                                             <button class="btn btn-primary btn-xs showModal" data-title="Edit" data-toggle="modal"
-                                                     data-target="#edit">Xem
-                                             </button>
-                                         </p>
-                                     </td>
-                                 </tr>
-                                 <tr>
-                                     <td>5</td>
-                                     <td>Nguyễn Thạch Mộng</td>
-                                     <td>mong.uit</td>
-                                     <td>employee</td>
-                                     <td>
-                                         <p data-placement="top" data-toggle="tooltip" title="Xem">
-                                             <button class="btn btn-primary btn-xs showModal" data-title="Xem" data-toggle="modal"
-                                                     data-target="#edit">Xem
-                                             </button>
-                                         </p>
-                                     </td>
-                                 </tr>
+                                 <?php
+                                    echo $renderString;
+                                 ?>
 
 
                                  </tbody>
