@@ -53,13 +53,13 @@
                         <a href="danhsachkhachhang.php">Danh sách khách hàng</a>
                     </li>
                     <li>
-                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                        <a href="#">Danh sách phiếu <span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li>
-                                <a href="#">Third Level Item</a>
+                                <a href="phieudaduyet.php">Phiếu đã duyệt</a>
                             </li>
                             <li>
-                                <a href="#">Third Level Item</a>
+                                <a href="phieudangchan.php">Phiếu đang chặn</a>
                             </li>
                             <li>
                                 <a href="#">Third Level Item</a>
