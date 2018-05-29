@@ -35,7 +35,6 @@
                 
                 label.sign {
                     font-weight: 400;
-                    font-size: 13px;
                 }
                 
                 @media(max-width: 1000px) {
@@ -168,23 +167,23 @@
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">
-                                <label class="sign">(Thủ trưởng)</label>
+                                <label class="sign">(Thủ trưởng)</label><br>
                                 <label class="sign">(Ký, họ tên)</label>
                             </div>
                             <div class="col-md-2 col-xs-2">
-                                <label class="sign">(Kế toán trưởng)</label>
+                                <label class="sign">(Kế toán trưởng)</label><br>
                                 <label class="sign">(Ký, họ tên)</label>
                             </div>
                             <div class="col-md-2 col-xs-2 exception-col">
-                                <label class="sign">(Kế toán thanh toán)</label>
+                                <label class="sign">(Kế toán thanh toán)</label><br>
                                 <label class="sign">(Ký, họ tên)</label>
                             </div>
                             <div class="col-md-2 col-xs-2">
-                                <label class="sign">(Người nhận tiền)</label>
+                                <label class="sign">(Người nhận tiền)</label><br>
                                 <label class="sign">(Ký, họ tên)</label>
                             </div>
                             <div class="col-md-2 col-xs-2">
-                                <label class="sign">(Thủ qũy)</label>
+                                <label class="sign">(Thủ qũy)</label><br>
                                 <label class="sign">(Ký, họ tên)</label>
                             </div>
                         </div>
