@@ -293,7 +293,7 @@ include '../layouts/header.php';
                             <label class="control-label">Loại tiền:</label>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                            <select name="" id="wareHouseId" class="form-control" required="required">
+                            <select name="" id="moneyTypeId" class="form-control" required="required">
                                 <?php
                                     if ($getMoneyType->num_rows > 0) {
                                         // output data of each row
@@ -305,7 +305,7 @@ include '../layouts/header.php';
                             </select>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            <input type="text" name="" id="wareHouseAddress" class="form-control" value="" required="required" pattern="" title="">
+                            <input type="text" name="" id="moneyTypeName" class="form-control" value="" required="required" pattern="" title="">
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="margin-left: 170px;">
                             <label class="control-label">Tỷ giá:</label>
