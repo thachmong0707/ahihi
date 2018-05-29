@@ -49,12 +49,6 @@
                             <li>
                                 <a href="phieudangchan.php">Phiếu đang chặn</a>
                             </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
                         </ul>
                         <!-- /.nav-third-level -->
                     </li>

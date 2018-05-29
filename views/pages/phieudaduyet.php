@@ -52,7 +52,7 @@
                         <td><?php echo $row["fullname"]; ?></td>
                         <td><?php echo $row["name"]; ?></td>   
                         <td style="text-align: center;" >                            
-                            <?php echo "<a href='update.php?id=" . $row['id'] . "'>Xem</a>"; ?>&nbsp;&nbsp;&nbsp;
+                            <?php echo "<a target='_blank' href='phieuchi.php?id=" . $row['id'] . "'>Xem</a>"; ?>&nbsp;&nbsp;&nbsp;
                          </td>
                         
                         
