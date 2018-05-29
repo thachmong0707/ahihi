@@ -51,7 +51,8 @@
                         <td><?php echo $row["date_create"]; ?></td>
                         <td><?php echo $row["fullname"]; ?></td>
                         <td><?php echo $row["name"]; ?></td>   
-                        <td style="text-align: center;" >                            
+                        <td style="text-align: center;" >
+                            <a href="<?php echo "phieuchi.php?print=".$row['id'];?>">Print</a> /
                             <?php echo "<a target='_blank' href='phieuchi.php?id=" . $row['id'] . "'>Xem</a>"; ?>&nbsp;&nbsp;&nbsp;
                          </td>
                         
