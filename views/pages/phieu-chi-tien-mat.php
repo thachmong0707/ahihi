@@ -74,10 +74,16 @@ VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười 
         line-height: 13px;
     }
 
+    .col-xs-2,.col-xs-1 label{
+        text-align: right;
+    }
+
     .table-title .add-new i {
         margin-right: 4px;
     }
-
+    label{
+        font-size: 12px;
+    }
     table.table {
         table-layout: fixed;
     }
@@ -115,6 +121,13 @@ VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười 
         color: #E34724;
     }
 
+    table.table td{
+        font-size: 13px;
+    }
+    table.table th{
+        font-size: 13px;
+    }
+
     table.table td i {
         font-size: 19px;
     }
@@ -126,6 +139,9 @@ VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười 
         top: 3px;
     }
 
+    .panel-body{
+        background: #F6F5F5;
+    }
     table.table .form-control {
         height: 32px;
         line-height: 32px;
@@ -156,150 +172,154 @@ include '../layouts/header.php';
     <div id="page-wrapper">
         <form action="" method="POST" class="form-horizontal" role="form">
             <div class="form-group">
-                    <h3 style="text-align: center;">PHIẾU CHI TIỀN MẶT</h3>
+                    <h2 style="text-align: center;">PHIẾU CHI TIỀN MẶT</h2>
             </div>
-            <div class="form-group">
-                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="margin-left: 354px; text-align: right;">
-                    <label class="control-label">Ngày lập:</label>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="input" class="form-control"value="<?php echo $currentDate; ?>" required="required" pattern="" title="" disabled="true">
-                </div>
-                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Số thứ tự:</label>
-                </div>
-                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="input" class="form-control" value="<?php echo $STT; ?>" required="required" pattern="" title="" disabled="true">
+            <div class="form-group" style="text-align: right; padding-bottom: 20px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <label class="control-label" style="font-weight: normal;">Ngày lập:</label>
+                    <label style="font-style: italic; padding-right: 20px; font-weight: normal;"><?php echo $currentDate; ?></label>
+                    <label class="control-label" style="font-weight: normal;">Số thứ tự:</label>
+                    <label style="font-style: italic; font-weight: normal;"><?php echo $STT; ?></label>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Mã khách hàng:</label>
-                </div>
-               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" class="form-control" value="" required="required" pattern="" title="" disabled="true" id="customerId">
-                    <label id="hidden-label" class="<?php echo $id; ?>"></label>
-                </div>
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <button type="button" class="btn btn-primary" style="height: 34px; margin-left: -20px;"
-                    id="btn-showListCustomers" data-target="#listCustomersModal" data-toggle="modal">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </div>
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="text-align: right;">
-                    <label class="control-label">Họ tên:</label>
-                </div>
-               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="customerName" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Đơn vị:</label>
-                </div>
-               <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="customerCompany" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-            </div>  
-            <div class="form-group">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Địa chỉ:</label>
-                </div>
-                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                    <input type="text" name="" id="customerAddress" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-            </div> 
-            <div class="form-group">
-                
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Tài khoản:</label>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <select name="" id="accountId" class="form-control" required="required">
-                        <?php
-                            if ($getAccountType->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $getAccountType->fetch_assoc()) {
-                                    echo "<option id='" . $row['id'] . "' class='" . $row['name'] . "'>C" . $row['id'] . "</option>";
-                                }
-                            } ?>
-                    </select>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="accountName" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Hợp đồng:</label>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"">
+                            <label class="control-label">Mã khách hàng:</label>
+                            <label id="hidden-label" class="<?php echo $id; ?>"></label>
+                        </div>
+                       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <input type="text" name="" class="form-control" value="" required="required" pattern="" title="" disabled="true" id="customerId">
+                            <label id="hidden-label" class="<?php echo $id; ?>"></label>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            <button type="button" class="btn btn-primary" style="height: 34px;"
+                            id="btn-showListCustomers" data-target="#listCustomersModal" data-toggle="modal">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" >
+                            <label class="control-label">Họ tên:</label>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="text" name="" id="customerName" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" >
+                            <label class="control-label">Đơn vị:</label>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <input type="text" name="" id="customerCompany" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Địa chỉ:</label>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input type="text" name="" id="customerAddress" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div> 
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Lý do:</label>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Chứng từ gốc:</label>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Kho:</label>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <select name="" id="wareHouseId" class="form-control" required="required">
-                        <?php
-                            if ($getWarehouse->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $getWarehouse->fetch_assoc()) {
-                                    echo "<option id='" . $row['name'] . "' class='" . $row['id'] . "' title='" . $row['address'] . "'>" . $row['name'] . "</option>";
-                                }
-                            } ?>
-                    </select>
-                </div>
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    <input type="text" name="" id="wareHouseAddress" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Tài khoản:</label>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <select name="" id="accountId" class="form-control" required="required">
+                                <?php
+                                    if ($getAccountType->num_rows > 0) {
+                                        // output data of each row
+                                        while ($row = $getAccountType->fetch_assoc()) {
+                                            echo "<option id='" . $row['id'] . "' class='" . $row['name'] . "'>C" . $row['id'] . "</option>";
+                                        }
+                                    } ?>
+                            </select>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <input type="text" name="" id="accountName" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Hợp đồng:</label>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Lý do:</label>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Chứng từ gốc:</label>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Kho:</label>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <select name="" id="wareHouseId" class="form-control" required="required">
+                                <?php
+                                    if ($getWarehouse->num_rows > 0) {
+                                        // output data of each row
+                                        while ($row = $getWarehouse->fetch_assoc()) {
+                                            echo "<option id='" . $row['name'] . "' class='" . $row['id'] . "' title='" . $row['address'] . "'>" . $row['name'] . "</option>";
+                                        }
+                                    } ?>
+                            </select>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <input type="text" name="" id="wareHouseAddress" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>
 
-            <div class="form-group">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Loại tiền:</label>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <select name="" id="wareHouseId" class="form-control" required="required">
-                        <?php
-                            if ($getMoneyType->num_rows > 0) {
-                                // output data of each row
-                                while ($row = $getMoneyType->fetch_assoc()) {
-                                    echo "<option id='" . $row['unit'] . "' class='" . $row['id'] . "' title='" . $row['name'] . "'
-                                                    alt='" . $row['rate'] . "'>" . $row['unit'] . "</option>";
-                                }
-                            } ?>
-                    </select>
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <input type="text" name="" id="wareHouseAddress" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                    <label class="control-label">Tỷ giá:</label>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                    <div class="form-group">
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+                            <label class="control-label">Loại tiền:</label>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <select name="" id="wareHouseId" class="form-control" required="required">
+                                <?php
+                                    if ($getMoneyType->num_rows > 0) {
+                                        // output data of each row
+                                        while ($row = $getMoneyType->fetch_assoc()) {
+                                            echo "<option id='" . $row['unit'] . "' class='" . $row['id'] . "' title='" . $row['name'] . "'
+                                                            alt='" . $row['rate'] . "'>" . $row['unit'] . "</option>";
+                                        }
+                                    } ?>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <input type="text" name="" id="wareHouseAddress" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="margin-left: 170px;">
+                            <label class="control-label">Tỷ giá:</label>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
     
         <div>
-            <div class="table-wrapper">
+            <div class="table-wrapper" style="background: #F6F5F5;">
                 <form id="tableForm" method="post" action="../../server/form_detail.php">
                     <table class="table table-striped table-bordered table-hover edit-table" id="edit-table">
                         <thead>
@@ -350,7 +370,7 @@ include '../layouts/header.php';
                     </table>
                     <div class="table-title">
                         <div class="row">
-                            <button type="button" class="btn btn-info add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="fa fa-plus"></i> Add New
+                            <button type="button" class="btn btn-danger add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="fa fa-plus"></i> Add New
                             </button>
                             <button id="sendForm" type="button" class="btn btn-danger add-new" style="margin-right: 15px; margin-bottom: 10px;" ><i class="fa fa-plus"></i> Submitform
                             </button>
@@ -359,25 +379,27 @@ include '../layouts/header.php';
                 </form>
             </div>
             <form action="" method="POST" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                        <input type="text" name="" id="accountNameTable" class="form-control" value="" required="required" pattern="" title="" disabled="true">
-                    </div>
-                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="text-align: right;">
-                        <label class="control-label">Tổng số tiền:</label>
+                <div class="form-group" style="padding-top: 30px;">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" >
+                        <label class="control-label" style="text-align: right;">Tổng: </label>
                     </div>
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                        <input type="text" name="" id="totalMoney" class="form-control" value="" required="required" pattern="" title="">
+                        <input type="text" name="" id="totalMoney" class="form-control" value="" required="required" pattern="" title="" disabled="true">
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <input type="text" name="" id="moneyString" class="form-control" value="" required="required" pattern="" title="" disabled="true">
                     </div>
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                        <input type="text" name="" id="moneyString" class="form-control" value="" required="required" pattern="" title="">
+                        <input type="text" name="" id="accountNameTable" class="form-control" value="" required="required" pattern="" title="" disabled="true">
                     </div>
+
                 </div>
-                <div class="form-group">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: right;">
-                        <button type="button" id="btn-save" name="btn-save" class="btn btn-info add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="fa fa-plus"></i> Lưu và in
+                <div class="form-group" style="padding-top: 30px;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;" >
+                        <button type="button" id="btn-save" name="btn-save" class="btn btn-danger add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-floppy-save"></i> Lưu và in
                             </button>
-                            <button type="button" id="resetFields" class="btn btn-info add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="fa fa-plus"></i> Đóng
+                            <button type="button" id="resetFields" class="btn btn-danger add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-remove"></i> Đóng
                             </button>
                     </div>
                 </div>
