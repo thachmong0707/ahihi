@@ -25,7 +25,7 @@
                     </li>
 
                     <li>
-                        <a href="#">Phân quyèn</a>
+                        <a href="role.php">Phân quyền</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

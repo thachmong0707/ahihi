@@ -16,4 +16,4 @@
   // echo "Rows selected: ".$result->num_rows."<br>\n";
   // mysqli_free_result($result);
   // mysqli_close($conn);
-?>  
+?>

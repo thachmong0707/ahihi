@@ -10,10 +10,10 @@
       $result = $conn->query($sql);
           if ($result->num_rows > 0){
               $_SESSION['userInfo'] = mysqli_fetch_array($result);
-              header("Location:http://localhost/ahihi/views/pages/index.php");
+              header("Location:http://localhost:8888/ahihi/views/pages/index.php");
           }
           else {
-              header("Location:http://localhost/ahihi/views/pages/login.php");
+              header("Location:http://localhost:8888/ahihi/views/pages/login.php");
           }
       }
 
