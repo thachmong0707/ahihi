@@ -17,8 +17,13 @@
  ?>
 
         <body>
+        <script type="text/javascript">
+            <?php if(isset($_GET['print'])) { ?>
+            window.print();
+            <?php } ?>
+        </script>
 
-            <style type="text/css">
+        <style type="text/css">
                 .header-title {
                     padding: 5px;
                 }
