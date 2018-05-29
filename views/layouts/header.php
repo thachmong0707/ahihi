@@ -12,7 +12,7 @@
     <meta name="author" content="">
 
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Nhóm Thu Chi</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
@@ -23,7 +23,7 @@
 
     <!-- Custom CSS -->
     <link href="../../vendor/admin/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../../vendor/admin/dist/css/style.css" rel="stylesheet">
+    <!-- <link href="../../vendor/admin/dist/css/style.css" rel="stylesheet"> -->
     <!-- <link href="../../vendor/css/style.css" rel="stylesheet"> -->
     <!-- Custom Fonts -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
