@@ -7,14 +7,6 @@
     include '../layouts/header.php';
 ?>
 
-    <?php
-
-    include '../../server/config.php';
-     $sql = " SELECT * FROM customers";
-
-    // Thực thi câu truy vấn và gán vào $result
-    $result = $conn->query($sql);
- ?>
 
         <body>
 
@@ -68,6 +60,18 @@
                     margin-right: 10%;
                 }
             </style>
+
+    <?php
+        $id = $_GET['id'];
+        include '../../server/config.php';
+        $sql_form = 'SELECT *, DAYOFMONTH(date_create), MONTH(date_create),YEAR(date_create) FROM `form` f, `customers` cus, `warehouse` w WHERE f.warehouse = w.id and cus.id = f.customer and f.id ='.$id.';';
+        // $sql_detail = 
+        // Thực thi câu truy vấn và gán vào $result
+        $result = $conn->query($sql_form);
+        while ( $row = mysqli_fetch_row($result) ) {
+            $form = $row;
+        }
+    ?> 
             <div class="container">
                 <div class="body-wrapper">
                     <div class="header-title">
@@ -79,7 +83,7 @@
                             <div class="col-md-5 col-xs-6">
                                 <h6 class="text-center">Mẫu số 02 -TT</h6>
                                 <h5 class="text-center">( Ban hành theo QĐ số 15/2016/QĐ-BTC <br> ngày 20/03/2006 của Bộ trưởng BTC )</h5>
-                                <h5 class="text-center">Số: Load số id của nó lên đây</h5>
+                                <h5 class="text-center">Số: <?php echo $form[1]; ?></h5>
                             </div>
 
                         </div>
@@ -92,34 +96,34 @@
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Người nhận tiền:</label>
-                                <label class="info">Đặng Minh Tâm (09001305</label>
+                                <label class="info"><?php echo $form[15].' (MaKH: '.$form[14].')'; ?></label>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Địa chỉ:</label>
-                                <label class="info">Kho Trà Nóc. Đặng Minh Tâm</label>
+                                <label class="info"><?php echo $form[20]; ?></label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Lý do chi: </label>
-                                <label class="info">Phí vận chuyển xi măng</label>
+                                <label class="info"><?php echo $form[3]; ?></label>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Số tiền:</label>
-                                <label class="info">1.650.000</label>
+                                <label class="info"><?php echo $form[4]; ?></label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1
                         ">
                                 <label>Chứng từ gốc:</label>
-                                <label class="info">HĐ 164</label>
+                                <label class="info"><?php echo $form[8]; ?></label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1">
                                 <label>Viết bằng chữ: </label>
-                                <label class="info">(Một triệu sáu trăm năm mươi ngàn đồng chẵn)</label>
+                                <label class="info"><?php echo $form[6]; ?></label>
                             </div>
                         </div>
                     </div>
@@ -154,7 +158,7 @@
                                             <td></td>
                                             <td></td>
                                             <td class="money-total">Tổng tiền</td>
-                                            <td>1.500.000</td>
+                                            <td><?php echo $form[4]; ?></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -162,7 +166,7 @@
                         </div>
                         <div class="row padding-row">
                             <p class="text-right date-sign"><strong>
-                                Ngày ... tháng ... năm ...
+                                Ngày <?php echo $form[21]; ?> tháng <?php echo $form[22]; ?> năm <?php echo $form[23]; ?>
                             </strong></p>
                         </div>
                         <div class="row padding-row">
