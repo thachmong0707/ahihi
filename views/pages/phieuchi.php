@@ -7,12 +7,16 @@
     include '../layouts/header.php';
 ?>
 
-
         <body>
-        <script type="text/javascript">
-            <?php if(isset($_GET['print'])) { ?>
-            window.print();
-            <?php } ?>
+        <script>
+            $(document).ready(()=>{
+                $('#exportPDF').click(()=>{
+                    $('#divExport').hide();
+                    window.print();
+                    window.onafterprint = $('#divExport').show();
+                });
+            });
+             
         </script>
 
         <style type="text/css">
@@ -70,13 +74,17 @@
         $id = $_GET['id'];
         include '../../server/config.php';
         $sql_form = 'SELECT *, DAYOFMONTH(date_create), MONTH(date_create),YEAR(date_create) FROM `form` f, `customers` cus, `warehouse` w WHERE f.warehouse = w.id and cus.id = f.customer and f.id ='.$id.';';
-        // $sql_detail = 
+        $sql_detail = 'SELECT * FROM form_detail d, form f, customers c, account_type a WHERE d.form_id = f.id and d.customer = c.id and d.account_type = a.id and d.form_id ='.$id.';';
         // Thực thi câu truy vấn và gán vào $result
         $result = $conn->query($sql_form);
-        while ( $row = mysqli_fetch_row($result) ) {
+        while ($row = mysqli_fetch_row($result) ) {
             $form = $row;
         }
-    ?> 
+        $detail = $conn->query($sql_detail);
+        
+
+    ?>
+            <div id="divExport" style="padding-top: 20px; padding-right: 100px; float: right;" ><button id="exportPDF" value="In ra PDF">In ra PDF</button></div>
             <div class="container">
                 <div class="body-wrapper">
                     <div class="header-title">
@@ -138,7 +146,7 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Mã số</th>
+                                            <th>Mã số KH</th>
                                             <th>Tên khách hàng</th>
                                             <th>TKDU</th>
                                             <th>Số tiền</th>
@@ -146,19 +154,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>71009613</td>
-                                            <td>Cty TNHH MTV NNK Khánh Vinh</td>
-                                            <td>1.500.000</td>
-                                            <td>1.500.000</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>71009613</td>
-                                            <td>Cty TNHH MTV NNK Khánh Vinh</td>
-                                            <td>1.500.000</td>
-                                            <td>1.500.000</td>
-                                        </tr>
+                                        <?php
+                                            while ($rowDetail = mysqli_fetch_row($detail) ) {
+                                                echo '<tr>';
+                                                echo '<td>'.$rowDetail[6].'</td>';
+                                                echo '<td>'.$rowDetail[22].'</td>';
+                                                echo '<td>C'.$rowDetail[1].'</td>';
+                                                echo '<td>'.$rowDetail[2].'</td>';
+                                                echo '</tr>';   
+                                            }
+                                        ?>
+                                        
                                         <tr>
                                             <td></td>
                                             <td></td>
