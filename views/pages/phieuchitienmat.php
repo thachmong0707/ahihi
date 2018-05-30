@@ -45,6 +45,9 @@ VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười 
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    
+</head>
 <?php
 include '../layouts/header.php';
 ?>
