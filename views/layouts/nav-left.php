@@ -36,6 +36,9 @@
                     <li>
                         <a href="duyetphieuchi.php">Duyệt phiếu chi</a>
                     </li>
+                    <li>
+                        <a href="danhsachphieuthu.php">Danh sach phiếu thu</a>
+                    </li>
 
                     <li>
                         <a href="danhsachkhachhang.php">Danh sách khách hàng</a>
@@ -50,7 +53,7 @@
                                 <a href="phieudangchan.php">Phiếu đang chặn</a>
                             </li>
                             <li>
-                                <a href="#">Third Level Item</a>
+                                <a href="phieuchi.php">Phiếu chi</a>
                             </li>
                             <li>
                                 <a href="#">Third Level Item</a>

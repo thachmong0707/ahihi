@@ -18,7 +18,9 @@
 
     <div id="wrapper">
 
-        <div id="page-wrapper" style="margin-left: 200px; margin-right: 200px">
+        
+        	<div class="row">
+        		<div class="container">
         	<div class="row" >
         		<input type="button" style="float: right;margin-top: 20px" name="in-pdf" value="IN PHIẾU">
         	</div>
@@ -135,6 +137,8 @@
 				</div>
 				
 			</div>
+			</div>
+			</div>
             <!-- /.row -->
            
            <!--  <h3>
@@ -143,7 +147,7 @@
             	<button type="button" class="btn btn-default">XÓA</button>
             </h3>     -->        
            
-        </div>
+       
         <!-- /#page-wrapper -->
 
     </div>
