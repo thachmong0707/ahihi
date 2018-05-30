@@ -10,7 +10,8 @@
      $sql = "   SELECT * FROM form_status , users ,form 
                 WHERE form_status.id = form.status 
                     and form.user = users.id
-                    and form_type= 1";
+                    and form_type= 1
+                    and status=1";
  
     // Thực thi câu truy vấn và gán vào $result
     $result = $conn->query($sql);
@@ -51,9 +52,8 @@
                         <td><?php echo $row["fullname"]; ?></td>
                         <td><?php echo $row["name"]; ?></td>   
                         <td style="text-align: center;" >
-                            <?php echo "<a href='update.php?id=" . $row['id'] . "'>Duyệt</a>"; ?>&nbsp;&nbsp;&nbsp;
-                            <?php echo "<a href='block.php?id=" . $row['id'] . "'>Chặn</a>"; ?>&nbsp;&nbsp;&nbsp;
-                            <?php echo "<a href='update.php?id=" . $row['id'] . "'>Xem</a>"; ?>&nbsp;&nbsp;&nbsp;
+                            
+                            <?php echo "<a target=\"_blank\" href='phieuthu.php?id=" . $row['id'] . "'>Xem</a>"; ?>&nbsp;&nbsp;&nbsp;
                          </td>
                         
                         
