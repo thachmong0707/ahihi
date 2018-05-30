@@ -8,7 +8,7 @@
         if (!$result){
             die("Errors: ".mysqli_error($conn));
         }else{
-            header("Location:http://localhost:8888/ahihi/views/pages/role.php");
+            header("Location:http://localhost/ahihi/views/pages/role.php");
         }
     }
 ?>

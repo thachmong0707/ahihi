@@ -148,7 +148,7 @@
                                         <tr>
                                             <th>Mã số KH</th>
                                             <th>Tên khách hàng</th>
-                                            <th>TKDU</th>
+                                            <th>TKĐƯ</th>
                                             <th>Số tiền</th>
 
                                         </tr>

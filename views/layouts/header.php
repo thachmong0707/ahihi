@@ -1,7 +1,7 @@
 <?php
     @session_start();
     if(!isset($_SESSION['userInfo'])){
-        header("Location:http://localhost:8888/ahihi/views/pages/login.php");
+        header("Location:http://localhost/ahihi/views/pages/login.php");
     }
 ?>
 <head>

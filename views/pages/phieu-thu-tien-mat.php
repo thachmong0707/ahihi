@@ -729,7 +729,7 @@ include '../layouts/script-footer.php';
             var content  = $("#content").val();
             var totalMoney  = $("#totalMoney").attr('value');
             var moneyString  = $("#moneyString").attr('value');
-            var formType  = 2;
+            var formType  = 1;
             var accountType  = $("#accountId").val();
             var receipt  = $("#receipt").val();
             var userId = $("#userId").val();
