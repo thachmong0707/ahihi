@@ -7,19 +7,18 @@
     include '../layouts/header.php';
 ?>
 
-        <body>
-        <script>
-            $(document).ready(()=>{
-                $('#exportPDF').click(()=>{
-                    $('#divExport').hide();
-                    window.print();
-                    window.onafterprint = $('#divExport').show();
-                });
-            });
-             
-        </script>
+    <?php
 
-        <style type="text/css">
+    include '../../server/config.php';
+     $sql = " SELECT * FROM customers";
+
+    // Thực thi câu truy vấn và gán vào $result
+    $result = $conn->query($sql);
+ ?>
+
+        <body>
+
+            <style type="text/css">
                 .header-title {
                     padding: 5px;
                 }
@@ -69,22 +68,6 @@
                     margin-right: 10%;
                 }
             </style>
-
-    <?php
-        $id = $_GET['id'];
-        include '../../server/config.php';
-        $sql_form = 'SELECT *, DAYOFMONTH(date_create), MONTH(date_create),YEAR(date_create) FROM `form` f, `customers` cus, `warehouse` w WHERE f.warehouse = w.id and cus.id = f.customer and f.id ='.$id.';';
-        $sql_detail = 'SELECT * FROM form_detail d, form f, customers c, account_type a WHERE d.form_id = f.id and d.customer = c.id and d.account_type = a.id and d.form_id ='.$id.';';
-        // Thực thi câu truy vấn và gán vào $result
-        $result = $conn->query($sql_form);
-        while ($row = mysqli_fetch_row($result) ) {
-            $form = $row;
-        }
-        $detail = $conn->query($sql_detail);
-        
-
-    ?>
-            <div id="divExport" style="padding-top: 20px; padding-right: 100px; float: right;" ><button id="exportPDF" value="In ra PDF">In ra PDF</button></div>
             <div class="container">
                 <div class="body-wrapper">
                     <div class="header-title">
@@ -94,14 +77,14 @@
                                 <h5 class="text-center">17- P.KD VLXH (BH)</h5>
                             </div>
                             <div class="col-md-5 col-xs-6">
-                                <h6 class="text-center">Mẫu số 02 -TT</h6>
+                                <h6 class="text-center">Mẫu số 01 -TT</h6>
                                 <h5 class="text-center">( Ban hành theo QĐ số 15/2016/QĐ-BTC <br> ngày 20/03/2006 của Bộ trưởng BTC )</h5>
-                                <h5 class="text-center">Số: <?php echo $form[1]; ?></h5>
+                                <h5 class="text-center">Số: Load số id của nó lên đây</h5>
                             </div>
 
                         </div>
                         <div class="row text-center">
-                            <h2><strong>PHIẾU CHI</strong></h2></div>
+                            <h2><strong>PHIẾU THU</strong></h2></div>
                     </div>
 
                     <div class="body-content">
@@ -109,34 +92,34 @@
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Người nhận tiền:</label>
-                                <label class="info"><?php echo $form[15].' (MaKH: '.$form[14].')'; ?></label>
+                                <label class="info">Đặng Minh Tâm (09001305</label>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Địa chỉ:</label>
-                                <label class="info"><?php echo $form[20]; ?></label>
+                                <label class="info">Kho Trà Nóc. Đặng Minh Tâm</label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Lý do chi: </label>
-                                <label class="info"><?php echo $form[3]; ?></label>
+                                <label class="info">Phí vận chuyển xi măng</label>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
                                 <label>Số tiền:</label>
-                                <label class="info"><?php echo $form[4]; ?></label>
+                                <label class="info">1.650.000</label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1
                         ">
                                 <label>Chứng từ gốc:</label>
-                                <label class="info"><?php echo $form[8]; ?></label>
+                                <label class="info">HĐ 164</label>
                             </div>
                         </div>
                         <div class="row padding-row">
                             <div class="col-md-5 col-md-offset-1">
                                 <label>Viết bằng chữ: </label>
-                                <label class="info"><?php echo $form[6]; ?></label>
+                                <label class="info">(Một triệu sáu trăm năm mươi ngàn đồng chẵn)</label>
                             </div>
                         </div>
                     </div>
@@ -146,7 +129,7 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Mã số KH</th>
+                                            <th>Mã số</th>
                                             <th>Tên khách hàng</th>
                                             <th>TKDU</th>
                                             <th>Số tiền</th>
@@ -154,22 +137,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            while ($rowDetail = mysqli_fetch_row($detail) ) {
-                                                echo '<tr>';
-                                                echo '<td>'.$rowDetail[6].'</td>';
-                                                echo '<td>'.$rowDetail[22].'</td>';
-                                                echo '<td>C'.$rowDetail[1].'</td>';
-                                                echo '<td>'.$rowDetail[2].'</td>';
-                                                echo '</tr>';   
-                                            }
-                                        ?>
-                                        
+                                        <tr>
+                                            <td>71009613</td>
+                                            <td>Cty TNHH MTV NNK Khánh Vinh</td>
+                                            <td>1.500.000</td>
+                                            <td>1.500.000</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>71009613</td>
+                                            <td>Cty TNHH MTV NNK Khánh Vinh</td>
+                                            <td>1.500.000</td>
+                                            <td>1.500.000</td>
+                                        </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td class="money-total">Tổng tiền</td>
-                                            <td><?php echo $form[4]; ?></td>
+                                            <td>1.500.000</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -177,7 +162,7 @@
                         </div>
                         <div class="row padding-row">
                             <p class="text-right date-sign"><strong>
-                                Ngày <?php echo $form[21]; ?> tháng <?php echo $form[22]; ?> năm <?php echo $form[23]; ?>
+                                Ngày ... tháng ... năm ...
                             </strong></p>
                         </div>
                         <div class="row padding-row">

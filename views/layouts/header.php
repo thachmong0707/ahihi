@@ -12,7 +12,7 @@
     <meta name="author" content="">
 
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Nhóm Thu Chi</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
@@ -23,7 +23,7 @@
 
     <!-- Custom CSS -->
     <link href="../../vendor/admin/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../../vendor/admin/dist/css/style.css" rel="stylesheet">
+    <!-- <link href="../../vendor/admin/dist/css/style.css" rel="stylesheet"> -->
     <!-- <link href="../../vendor/css/style.css" rel="stylesheet"> -->
     <!-- Custom Fonts -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../vendor/css/view-css.css">
     <link rel="stylesheet" type="text/css" href="../../vendor/css/listUser.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
