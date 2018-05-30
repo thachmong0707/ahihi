@@ -14,8 +14,16 @@
 		}
 		// var_dump($oneObj[0]);
 
+$sql_Id = "SELECT Max(id) FROM form";
+$res = $conn->query($sql_Id);
+if ($res->num_rows > 0){
+	$formId = mysqli_fetch_array($res)[0];
+	// print_r($formId);
+}
+else {
+	 $conn->error;
+}
 		//get cusID from form
-		$formId = 1;
         $accountType =$oneObj[0] ;
         $accountType = substr($accountType, 1);;
         // var_dump($accountType);
@@ -36,18 +44,5 @@
         $sql = "INSERT INTO form_detail
             VALUES ( '".$formId."', '".$accountType."', '".$money."', '".$moneyVND."', '".$dateCreated."', '".$contractType."', '".$customerId."')";
             $conn->query($sql);
-   //          if ($conn->query($sql) === TRUE) {
-			//     echo "New record created successfully";
-			// } else {
-			//     echo "Error: " . $sql . "<br>" . $conn->error;
-			// }
-		// print_r($oneObj[0]);
-		// print_r($oneObj[1]);
-		// print_r($oneObj[2]);
-		// print_r($oneObj[3]);
-		// print_r($oneObj[4]);
-		// print_r($oneObj[5]);
-		// print_r($oneObj[6]);
-		// print_r($oneObj[7]);
 	}
 ?>

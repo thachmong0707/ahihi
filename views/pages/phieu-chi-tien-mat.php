@@ -1,4 +1,10 @@
 <?php
+    @session_start();
+    if(isset($_SESSION['userInfo'])){
+        $user = $_SESSION['userInfo'];
+    }
+
+
 include "../../server/config.php";
 
 // load STT into input fields
@@ -25,27 +31,6 @@ $sql_getListCustomers = "select * from customers";
 $getListCustomers = $conn->query($sql_getListCustomers);
 
 
-if (isset($_POST['btn-save']) && ($_POST['btn-save'] == 'save')) {
-
-    $content = ($_POST['content']);
-    $total_money = $_POST['total_money'];
-
-
-    $sql_getID = "select max(id) form form";
-    $getID = $conn->query($sql_getID);
-
-    $sql = "INSERT INTO form(id, form_id, date_create, content, total_money, total_money_text, form_type, account_type, receipt, user, customer, warehouse, money_type, status) 
-VALUES (3, 'CTM0125-16-96', CURRENT_TIMESTAMP, 'đòi nợ', 10000000, 'mười triệu', 2, '1111', 'chung tu goc', 1,1,1,1,2)";
-    // echo $sql;
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-// echo $content;
-
-}
 ?>
 <style type="text/css">
     /*  .table-wrapper {
@@ -176,10 +161,11 @@ include '../layouts/header.php';
             </div>
             <div class="form-group" style="text-align: right;">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="text" class="hidden" id="userId" value="<?php echo $user[0]?>"/>
                     <label class="control-label" style="font-weight: normal;">Ngày lập:</label>
-                    <label style="font-style: italic; padding-right: 20px; font-weight: normal;"><?php echo $currentDate; ?></label>
+                    <label style="font-style: italic; padding-right: 20px; font-weight: normal;" id="dateCreate"><?php echo $currentDate; ?></label>
                     <label class="control-label" style="font-weight: normal;">Số thứ tự:</label>
-                    <label style="font-style: italic; font-weight: normal;"><?php echo $STT; ?></label>
+                    <label style="font-style: italic; font-weight: normal;" id="formId" class="<?php echo $STT; ?>"><?php echo $STT; ?></label>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -257,7 +243,7 @@ include '../layouts/header.php';
                             <label class="control-label">Lý do:</label>
                         </div>
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                            <input type="text" name="" id="content" class="form-control" required="required" pattern="" title="">
                         </div>
                     </div>
                     <div class="form-group">
@@ -265,7 +251,7 @@ include '../layouts/header.php';
                             <label class="control-label">Chứng từ gốc:</label>
                         </div>
                         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                            <input type="text" name="" id="receipt" class="form-control" value="" required="required" pattern="" title="">
                         </div>
                     </div>
                     <div class="form-group">
@@ -293,6 +279,7 @@ include '../layouts/header.php';
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
                             <label class="control-label">Loại tiền:</label>
                         </div>
+                        <input type="text" id="moneyId" value="" class="hidden">
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                             <input type="text" name="" id="moneyTypeId" class="form-control" value="" disabled="">
                         </div>
@@ -329,42 +316,28 @@ include '../layouts/header.php';
                         </thead>
                         <tbody>
                         <tr>
-                            <td>N1111</td>
+                            <td></td>
                             <td>- -</td>
                             <td></td>
                             <td></td>
-                            <td>50000</td>
-                            <td>50000</td>
                             <td></td>
-                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td>
                                 <a class="add" title="Add" data-toggle="tooltip"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a class="delete" title="Delete" data-toggle="tooltip"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>N1112</td>
-                            <td>- -</td>
-                            <td></td>
-                            <td></td>
-                            <td>50000</td>
-                            <td>50000</td>
-                            <td></td>
-                            <td>1</td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
+                        
                         </tbody>
                     </table>
                     <div class="table-title">
                         <div class="row">
                             <button type="button" class="btn btn-success add-new" style="margin-right: 15px;><i class="fa fa-plus"></i> Thêm dòng
                             </button>
-                            <button id="sendForm" type="button" class="btn btn-danger" style="margin-right: 15px; ><i class="fa fa-plus"></i> Submitform
+                            <button id="sendForm" type="button" class="btn btn-danger hidden" style="margin-right: 15px; ><i class="fa fa-plus"></i> Submitform
                             </button>
                         </div>
                     </div>
@@ -391,9 +364,9 @@ include '../layouts/header.php';
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;" >
-                        <button type="button" id="btn-save" name="btn-save" class="btn btn-success add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-floppy-save"></i> Lưu và in
+                        <button type="button" id="btn-save" name="btn-save" class="btn btn-success" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-floppy-save"></i> Lưu và in
                             </button>
-                            <a href="http://localhost/ahihi/views/pages/index.php" type="button" id="resetFields" class="btn btn-info add-new" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-remove"></i> Đóng
+                            <a href="http://localhost/ahihi/views/pages/index.php" type="button" id="resetFields" class="btn btn-info" style="margin-right: 15px; margin-bottom: 10px;"><i class="glyphicon glyphicon-remove"></i> Đóng
                             </a>
                     </div>
                 </div>
@@ -465,25 +438,7 @@ include '../layouts/script-footer.php';
 
         $('#customerCompany2').attr('value', $('#customerCompany').val());
 
-        $('#btn-save').on('click',function(){
-
-            // var id= $('#customerId').val();
-            // var name = $('#customerName').val();
-            // var company= $('#customerCompany').val();
-            // var address = $('#customerAddress').val();
-            // var data={id, name, company, address};
-
-            // $.ajax({
-            //     type: "POST",
-            //     url:'../../server/ajax_phieuchitienmat.php',
-            //     data: data,
-            //     success: function (response) {
-            //         alert('Send data Success');
-            //         // console.log(response);
-            //     }
-            // });
-
-        });
+       
 
         $("#customerName, #customerAddress, #customerCompany").change(function () {
             const customerId = $('#hidden-label').attr('class');
@@ -496,15 +451,18 @@ include '../layouts/script-footer.php';
             var accountName = $('#' + accountId).attr("class");
             $('#accountName').attr('value', accountName);
             if (accountId =='1111'){
+                $('#moneyId').attr('value', '1');
                 $('#moneyTypeId').attr('value', 'VNĐ');
                 $('#moneyTypeName').attr('value', 'Đồng');
                 $('#moneyTypeRate').attr('value', '1.0');
             }else{
+                $('#moneyId').attr('value', '2');
                 $('#moneyTypeId').attr('value', 'USD');
                 $('#moneyTypeName').attr('value', 'Dollar');
                 $('#moneyTypeRate').attr('value', '1.2');
             }
             // console.log(accountId);
+            
         });
 
         $("#wareHouseId").change(function () {
@@ -793,6 +751,42 @@ include '../layouts/script-footer.php';
         }
         return jObject;
     }
+
+
+     $('#btn-save').on('click',function(){
+
+            var customerId= $('#customerId').val();
+            var name = $('#customerName').val();
+            var company= $('#customerCompany').val();
+            var address = $('#customerAddress').val();
+
+            var formId = $("#formId").attr('class');
+            var dateCreate  = $("#dateCreate").val();
+            var content  = $("#content").val();
+            var totalMoney  = $("#totalMoney").attr('value');
+            var moneyString  = $("#moneyString").attr('value');
+            var formType  = 2;
+            var accountType  = $("#accountId").val();
+            var receipt  = $("#receipt").val();
+            var userId = $("#userId").val();
+            var wareHouseId = $('#wareHouseId').val();
+            var warehouseId = $('#' + wareHouseId).attr("class");
+            var moneyTypeId = $('#moneyId').attr('value');
+
+
+            var receipt  = $("#receipt").val();
+            var data={customerId, name, company, address, formId,dateCreate, content,totalMoney,moneyString,formType, accountType,receipt, userId, warehouseId, moneyTypeId};
+
+            $.ajax({
+                type: "POST",
+                url:'../../server/ajax_phieuchitienmat.php',
+                data: data,
+                success: function (response) {
+                    $( "#sendForm" ).trigger( "click" );
+                }
+            });
+
+        });
 
 </script>
 
