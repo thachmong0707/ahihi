@@ -66,7 +66,7 @@
                                                   <?php
                                                       foreach($roles as $role){
                                                   ?>
-                                                      <option <?php if($role[0] == $value) echo "selected"; ?>><?php echo $role[1]; ?></option>
+                                                      <option <?php if($role[0] == $value) echo "selected"; ?> value="<?php echo $role[0]; ?>"><?php echo $role[1]; ?></option>
                                                   <?php
                                                       }
                                                   ?>
