@@ -6,14 +6,19 @@
 
 <?php
     include "../../server/config.php";
-    $sql_getUser = "select id, fullname, username, role, info from users";
+    $sql_getUser = "select id, fullname, username, role, info, picture from users";
     $getUser = $conn->query($sql_getUser);
     $users = mysqli_fetch_all($getUser);
     $renderString = "";
+    $defaultAvatar = "avatar.png";
     foreach($users as $user) {
         $renderString = $renderString."<tr>";
-        foreach($user as $attr) {
-            $renderString = $renderString."<td>".$attr."</td>" ;
+        foreach($user as $index => $attr) {
+            if($index == 5){
+                $renderString = $renderString."<td class=\"hide\">".$attr."</td>" ;
+            }else{
+                $renderString = $renderString."<td>".$attr."</td>" ;
+            } 
         }
 
 
@@ -93,7 +98,7 @@
                              </div>
                              <div class="modal-body">
                                  <div class="avatar">
-                                     <img src="../../vendor/img/avatar.png"/>
+                                     <img id="user-avatar" src="../../vendor/img/<?php echo $defaultAvatar ?>"/>
                                  </div>
                                  <div class="row margin-top-20">
                                      <div class="col-sm-6">
