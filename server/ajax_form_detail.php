@@ -45,4 +45,7 @@ else {
             VALUES ( '".$formId."', '".$accountType."', '".$money."', '".$moneyVND."', '".$dateCreated."', '".$contractType."', '".$customerId."')";
             $conn->query($sql);
 	}
+
+	
+	print_r($formId);
 ?>
