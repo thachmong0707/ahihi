@@ -16,33 +16,29 @@
     $managerString = "<li>
         <a href='#'><i class='fa fa-sitemap fa-fw'></i> Quản lý<span class='fa arrow'></span></a>
         <ul class='nav nav-second-level'>
-            <li>
-                <a href='duyetphieuchi.php'>Duyệt phiếu chi</a>
-            </li>
+            
             <li>
                 <a href='danhsachphieuthu.php'>Danh sach phiếu thu</a>
             </li>
 
-            <li>
-                <a href='danhsachkhachhang.php'>Danh sách khách hàng</a>
-            </li>
+            
             <li>
                 <a href='#'>Danh sách phiếu chi <span class='fa arrow'></span></a>
                 <ul class='nav nav-third-level'>
+                    <li>
+                    <a href='duyetphieuchi.php'>Duyệt phiếu chi</a>
+                    </li>
                     <li>
                         <a href='phieudaduyet.php'>Phiếu đã duyệt</a>
                     </li>
                     <li>
                         <a href='phieudangchan.php'>Phiếu đang chặn</a>
                     </li>
-                    <li>
-                        <a href='phieuchi.php'>Phiếu chi</a>
-                    </li>
-                    <li>
-                        <a href='#'>Third Level Item</a>
-                    </li>
                 </ul>
                 <!-- /.nav-third-level -->
+            </li>
+            <li>
+                <a href='danhsachkhachhang.php'>Danh sách khách hàng</a>
             </li>
         </ul>
         <!-- /.nav-second-level -->
@@ -76,6 +72,7 @@
                 ?>
         </ul>
     </div>
+    
     <!-- /.sidebar-collapse -->
 </div>
 <!-- /.navbar-static-side -->

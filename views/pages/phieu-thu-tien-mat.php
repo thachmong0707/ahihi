@@ -12,7 +12,7 @@ $sql_getID = "select max(id) from form";
 $getID = $conn->query($sql_getID);
 $id = (int)mysqli_fetch_array($getID)[0] + 1;
 $currentDate = date("d-m-y");
-$STT = "CTM" . $id . $currentDate;
+$STT = "TTM" . $id . $currentDate;
 
 // Load AccountType into select options
 $sql_getAccountType = "select * from account_type where id='1111' or id='1112'";
@@ -693,8 +693,11 @@ include '../layouts/script-footer.php';
             url: '../../server/ajax_form_detail.php',
             data: data,
             success: function (response) {
+                formId = response;
                 alert('Thêm dữ liệu thành công');
                 // console.log(response);
+                url = "http://localhost/ahihi/views/pages/phieuthu.php?id="+formId;
+                window.open(url,'_blank');
             }
         });
     });

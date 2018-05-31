@@ -6,7 +6,7 @@
 
 <?php
     include "../../server/config.php";
-    $sql_getUser = "select id, fullname, username, role, info, picture from users";
+    $sql_getUser = "select u.id, fullname, username, r.name, info, picture from users u, roles r where u.role = r.id";
     $getUser = $conn->query($sql_getUser);
     $users = mysqli_fetch_all($getUser);
     $renderString = "";

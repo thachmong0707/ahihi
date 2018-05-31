@@ -3,6 +3,34 @@
 <?php
     include '../layouts/header.php';
 ?>
+
+<?php
+    include '../../server/config.php';
+    $sql_user = 'select count(id) from users;';
+    // Thực thi câu truy vấn và gán vào $result
+    $result = $conn->query($sql_user);
+    while ( $row = mysqli_fetch_row($result) ) {
+        $users = $row;
+    }
+
+    $sql_phieuthu = 'SELECT count(*) FROM `form` WHERE `form_type` = 1';
+    $result = $conn->query($sql_phieuthu);
+    while ( $row = mysqli_fetch_row($result) ) {
+        $form_thu = $row;
+    }
+
+    $sql_customer = 'SELECT count(*) FROM `customers`';
+    $result = $conn->query($sql_customer);
+    while ( $row = mysqli_fetch_row($result) ) {
+        $customer = $row;
+    }
+
+    $sql_phieuchi = 'SELECT count(*) FROM `form` WHERE `form_type` = 2';
+    $result = $conn->query($sql_phieuchi);
+    while ( $row = mysqli_fetch_row($result) ) {
+        $form_chi = $row;
+    }
+?>
 <body>
 
     <div id="wrapper">
@@ -28,7 +56,7 @@
                                     <i class="fa fa-book fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge"><?php echo $customer[0];?></div>
                                     <div>Tổng số khách hàng</div>
                                 </div>
                             </div>
@@ -50,12 +78,12 @@
                                     <i class="fa fa-cog fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge"><?php echo $form_thu[0];?></div>
                                     <div>Phiếu thu</div>
                                 </div>
                             </div>
                         </div>
-                        <a href='phieu-thu-tien-mat.php'>
+                        <a href='danhsachphieuthu.php'>
                             <div class="panel-footer">
                                 <span class="pull-left">Xem chi tiết</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -72,8 +100,8 @@
                                     <i class="fa fa-edit fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Phiếu chi đã duyệt</div>
+                                    <div class="huge"><?php echo $form_chi[0];?></div>
+                                    <div>Phiếu chi</div>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +122,7 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">10</div>
+                                    <div class="huge"><?php echo $users[0];?></div>
                                     <div>Tổng số nhân viên</div>
                                 </div>
                             </div>

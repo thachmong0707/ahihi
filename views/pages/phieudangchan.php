@@ -27,7 +27,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Duyệt Phiếu Chi</h1>
+                    <h2 class="page-header">Phiếu chi đã chặn</h2>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

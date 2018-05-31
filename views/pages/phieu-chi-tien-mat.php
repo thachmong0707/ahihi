@@ -732,7 +732,8 @@ include '../layouts/script-footer.php';
                 formId = response;
                 alert('Thêm dữ liệu thành công');
                 // window.location.replace("http://localhost/ahihi/views/pages/index.php");
-                window.location = "http://localhost/ahihi/views/pages/phieuchi.php?id="+formId;
+                url = "http://localhost/ahihi/views/pages/phieuchi.php?id="+formId;
+                window.open(url,'_blank');
                 // console.log(response);
             }
         });
