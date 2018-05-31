@@ -24,12 +24,25 @@ $warehouseId = $_REQUEST['warehouseId'];
 $moneyTypeId = $_REQUEST['moneyTypeId'];
 
 
+$sql_role= "SELECT role from users where id ='".$userId."'";
+$role = $conn->query($sql_role);
+if ($role->num_rows > 0){
+    $roleId = mysqli_fetch_array($role)[0];
+}
+else {
+     $conn->error;
+}
+    if ($roleId ==1)
+        $status =2;
+    else $status =1;
+    print_r($status);   
+
 //check customer
 $sql = "SELECT id FROM customers where id ='" . $customerId . "'";
 // echo $sql;
-$res = $conn->query($sql);;
+$res = $conn->query($sql);
 if ($res->num_rows > 0) {
-    $main_sql = "INSERT INTO form(form_id, date_create, content, total_money, total_money_text, form_type, account_type, receipt, user, customer, warehouse, money_type, status) VALUES ('" . $formId . "', '" . $dateCreate . "', '" . $content . "', '" . $totalMoney . "', '" . $moneyString . "', '" . $formType . "', '" . $accountType . "', '" . $receipt . "', '" . $userId . "', '" . $customerId . "', '" . $warehouseId . "', '" . $moneyTypeId . "', 2)";
+    $main_sql = "INSERT INTO form(form_id, date_create, content, total_money, total_money_text, form_type, account_type, receipt, user, customer, warehouse, money_type, status) VALUES ('" . $formId . "', '" . $dateCreate . "', '" . $content . "', '" . $totalMoney . "', '" . $moneyString . "', '" . $formType . "', '" . $accountType . "', '" . $receipt . "', '" . $userId . "', '" . $customerId . "', '" . $warehouseId . "', '" . $moneyTypeId . "', '".$status."')";
     $result = $conn->query($main_sql);
     if ($result == true) {
         var_dump('sucess');
@@ -51,6 +64,6 @@ if ($res->num_rows > 0) {
         echo $conn->error;
     }
 }
-
+print_r($formId);
 
 ?>

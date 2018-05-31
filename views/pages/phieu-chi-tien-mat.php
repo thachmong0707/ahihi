@@ -729,7 +729,10 @@ include '../layouts/script-footer.php';
             url: '../../server/ajax_form_detail.php',
             data: data,
             success: function (response) {
+                formId = response;
                 alert('Thêm dữ liệu thành công');
+                // window.location.replace("http://localhost/ahihi/views/pages/index.php");
+                window.location = "http://localhost/ahihi/views/pages/phieuchi.php?id="+formId;
                 // console.log(response);
             }
         });
@@ -783,6 +786,7 @@ include '../layouts/script-footer.php';
                 data: data,
                 success: function (response) {
                     $( "#sendForm" ).trigger( "click" );
+                    
                 }
             });
 

@@ -78,10 +78,37 @@ create table phieu
     maloaitien int,
     trangthai int,
     foreign key (loaiphieuId) references loaiphieu(id),
-    foreign key (account_type) references account_type(id),
-    foreign key (user) references users(id),
-    foreign key (customer) references customers(id),
-    foreign key (warehouse) references warehouse(id),
-    foreign key (money_type) references money_type(id),
-    foreign key (status) references form_status(id)
+    foreign key (loaiTK) references loaitaikhoan(id),
+    foreign key (maNV) references nhanvien(id),
+    foreign key (maKH) references khachhang(id),
+    foreign key (maKho) references kho(id),
+    foreign key (maloaitien) references loaitien(id),
+    foreign key (trangthai) references trangthai(id)
 );
+
+create table loaihopdong
+(
+    id int primary key auto_increment,
+    tenhopdong text
+);
+
+-- money: value follow form ( USD,..vv..)
+-- money_vnd: parse money * rates
+create table chitietphieu
+(
+    phieu_id int,
+    loaiTK varchar(10),
+    sotien int,
+    sotien_vnd int,
+    ngatao date,
+    loaihopdong int,
+    khachhang int,
+    primary key (phieu_id, loaiTK),
+    foreign key (phieu_id) references phieu(id),
+    foreign key (loaiTK) references loaitaikhoan(id),
+    foreign key (loaihopdong) references loaihopdong(id),
+    foreign key (khachhang) references khachhang(id)
+);
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'admin' WITH GRANT OPTION;
+ FLUSH PRIVILEGES;
