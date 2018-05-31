@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2018 at 06:28 AM
+-- Generation Time: May 31, 2018 at 06:46 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -464,7 +464,9 @@ INSERT INTO `customers` (`id`, `fullname`, `address`, `company`) VALUES
 (1, 'Nguyễn Thị Hiền', 'UIT', 'UIT'),
 (2, 'Trần Nguyễn Thị Thơm', 'KTX KHU B', 'KHTN'),
 (3, 'Nguyễn Thị Kim Hoa', 'Ling Trung', 'UIT'),
-(4, 'Thái thị phương hân', 'QUận 9', 'FPT');
+(4, 'Thái thị phương hân', 'QUận 9', 'FPT'),
+(5, 'Lê Thanh Quang', 'Linh Đông, Thủ Đức, Hồ Chí Minh', 'VNG Corporation'),
+(6, 'Phan Minh Tâm', 'Bệnh viên Biên Hòa, Đồng Nai', 'Công ty thiết bị xây dựng Phú Hòa');
 
 -- --------------------------------------------------------
 
@@ -762,7 +764,7 @@ ALTER TABLE `contract_type`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `form`
